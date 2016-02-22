@@ -1,0 +1,21 @@
+{
+  "name": "ykofficial",
+  "version": "1.0.0",
+  "description": "深圳市有康互联网科技有限公司-require+grunt+less 面向对象开发",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "require;grunt;less"
+  ],
+  "author": "Punk.Li",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-requirejs": "^0.4.4"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
