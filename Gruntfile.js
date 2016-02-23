@@ -10,6 +10,9 @@ module.exports = function(grunt){
         banner:'/**\n' +
         '* <%=pkg.name%> v <%=pkg.version%>'+
         '*/',
+        clean:{
+            build:'www_build'
+        },
         requirejs:{
             options:{
                 banner:'<%=banner%>\n'
@@ -17,10 +20,36 @@ module.exports = function(grunt){
             multi:{
                 options:{
                     appDir:'www',
-                    mainConfigFile:''
+                    mainConfigFile:'www/js/app/module/common.js',
+                    dir:'www_build',
+                    modules:[
+                        {
+                            name:'../app/module/common',
+                            include:[
+                                'jquery',
+                                'BView',
+                                'BModule',
+                                'text',
+                                'extra'
+                            ]
+                        },
+                        {
+                            name:'../app/module/index',
+                            include:[
+                                'app/component/header'
+                            ],
+                            exclude:[
+                                '../app/module/common'
+                            ]
+                        }
+                    ]
                 }
             }
         }
     });
+
+    require('load-grunt-tasks')(grunt);
+
+    grunt.registerTask('default',['clean','requirejs']);
 
 }

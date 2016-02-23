@@ -18,12 +18,16 @@ requirejs.config({
         /********************************
          *        Bolt  框架
          ********************************/
-        BView:'app/component/abstract.view',
-        BModule:'app/module/abstract.module'
+        BView:'../app/component/abstract.view',
+        BModule:'../app/module/abstract.module'
     },
     skim:{
         jquery:{
             exports:'jquery'
+        },
+        extra:{
+            deps:['jquery'],
+            exports:'extra'
         }
     }
 });
