@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../www/js/lib/jquery/jquery.1.9.1.js"></script>
+</head>
+<body>
+    <script>
+        var a = {
+            '.click hello':'nihao',
+            '.mousedown world':'nihao too'
+        };
+        var regExp = /^((\.|#)\w+)\s(\w+)$/,arr;
+        $.each(a,function(a,b,c){
+
+            arr = a.match(regExp);
+            console.log(a);
+            console.log(b);
+            console.log(c);
+
+        })
+
+    </script>
+
+</body>
+</html>
