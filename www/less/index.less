@@ -1,3 +1,39 @@
+.we-can(@url){
+  background-image: url(@url);
+  width: 195px;
+  height: 195px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
+  .transition(0.5s);
+  margin-right:31px;
+}
+
+.home-title-bottom(@color){
+  border-bottom: 2px solid @color;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.home-title-bottom-before(@color){
+  content: '';
+  border-bottom: 2px solid @color;
+  width: 85px;
+  display: block;
+  position: absolute;
+  left: -85px;
+}
+.home-title-bottom-after(@color){
+  content: '';
+  border-bottom: 2px solid @color;
+  width: 85px;
+  position: absolute;
+  right: -85px;
+}
+
+
 /* ************** product introduction  **************** */
 .home-page-introduction{
   padding: 40px 0 60px 0;
@@ -7,9 +43,6 @@
     margin-right: 17px;
     overflow: hidden;
     position: relative;
-  }
-  .item:last-child{
-    margin-right: 0px;
   }
   .item::after{
     display: block;
@@ -35,11 +68,9 @@
   .item:nth-child(3):after{
     content: '医疗App';
   }
-  
   .item:hover:after{
     bottom: 0;
   }
-
 }
 
 /* ************** we can  **************** */
@@ -47,66 +78,12 @@
   background-color: @home-we-can-background-color;
   padding-bottom: 93px;
   .center-width{
-    .home-title{
-      text-align: center;
-      padding: 76px 0 80px 0;
-      .home-title-main{
-        font-size: 36px;
-      }
-      .home-title-second{
-        font-size: 26px;
-      }
-      .home-title-bottom{
-        border-bottom: 2px solid #ffffff;
-        width: 50px;
-        margin: 0 auto;
-        margin-top: 20px;
-        position: relative;
-      }
-      .home-title-bottom:before{
-        content: '';
-        border-bottom: 2px solid #000000;
-        width: 85px;
-        display: block;
-        position: absolute;
-        left: -85px;
-       }
-      .home-title-bottom:after{
-        content: '';
-        border-bottom: 2px solid #000000;
-        width: 85px;
-        position: absolute;
-        right: -85px;
-      }
-    }
-    .home-title.white{
-      color: #ffffff;
-    }
-    .home-title.dark{
-      color: #323232;
-    }
-
     .list{
       .item:hover{
         .transform-scale(1.1,1.1);
       }
-      .item:last-child{
-        margin-right:0px;
-      }
     }
   }
-}
-
-.we-can(@url){
-  background-image: url(@url);
-  width: 195px;
-  height: 195px;
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: center;
-  vertical-align: bottom;
-  .transition(0.5s);
-  margin-right:31px;
 }
 
 .we-can-1{
@@ -123,4 +100,82 @@
 }
 .we-can-5{
   .we-can("../images/we_can_5.png");
+}
+
+
+/* ************** home title  **************** */
+.home-title{
+  text-align: center;
+  padding: 76px 0 80px 0;
+  .home-title-main{
+    font-size: 36px;
+  }
+  .home-title-second{
+    font-size: 26px;
+  }
+  /*------------ --------- ----------*/
+  .home-title-bottom{
+    .home-title-bottom(#ffffff);
+  }
+  .home-title-bottom:before{
+    .home-title-bottom-before(#000000);
+  }
+  .home-title-bottom:after{
+    .home-title-bottom-after(#000000);
+  }
+  /*------------ --------- ----------*/
+  .home-title-bottom.white-red{
+    .home-title-bottom(red);
+  }
+  .home-title-bottom.white-red:before{
+    .home-title-bottom-before(#ffffff);
+  }
+  .home-title-bottom.white-red:after{
+    .home-title-bottom-after(#ffffff);
+  }
+}
+.home-title.white{
+  color: #ffffff;
+}
+.home-title.dark{
+  color: #323232;
+}
+
+/* ************** home product flow **************** */
+.home-product-flow{
+  background-image:url("../images/we_can_bg.png") ;
+  background-repeat: no-repeat;
+}
+.flow{
+  margin-top: 100px;
+  padding-bottom: 76px;
+  position: relative;
+  .flow-bone{
+    display: block;
+    width: 913px;
+    margin: 0 auto;
+  }
+  .flow-node{
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+  .flow-analysis{
+    background-image: url("../images/flow_analysis.png");
+  }
+  .flow-plan{
+    background-image: url("../images/flow_plan.png");
+  }
+  .flow-design{
+    background-image: url("../images/flow_design.png");
+  }
+  .flow-develop{
+    background-image: url("../images/flow_develop.png");
+  }
+  .flow-test{
+    background-image: url("../images/flow_test.png");
+  }
+  .flow-online{
+
+  }
 }

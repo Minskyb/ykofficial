@@ -5,7 +5,7 @@
         for(var i = 0,len = picList.length ; i < len ; i++){
             pic = picList[i];
         %>
-        <li class="item"><img src="<%=pic.url%>" class="full"></li>
+        <li class="item <% if (i == len-1) {%> margin-right-none <%}%> "><img src="<%=pic.url%>" class="full"></li>
         <%}%>
     </ul>
 </div>

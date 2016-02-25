@@ -30,6 +30,9 @@ body {
   text-decoration: none;
   color: #000000;
 }
+.margin-right-none {
+  margin-right: 0px !important;
+}
 .full {
   display: block;
   width: 100%;
@@ -274,9 +277,6 @@ body {
   overflow: hidden;
   position: relative;
 }
-.home-page-introduction .item:last-child {
-  margin-right: 0px;
-}
 .home-page-introduction .item::after {
   display: block;
   width: 346px;
@@ -314,53 +314,12 @@ body {
   background-color: #f26451;
   padding-bottom: 93px;
 }
-.home-we-can .center-width .home-title {
-  text-align: center;
-  padding: 76px 0 80px 0;
-}
-.home-we-can .center-width .home-title .home-title-main {
-  font-size: 36px;
-}
-.home-we-can .center-width .home-title .home-title-second {
-  font-size: 26px;
-}
-.home-we-can .center-width .home-title .home-title-bottom {
-  border-bottom: 2px solid #ffffff;
-  width: 50px;
-  margin: 0 auto;
-  margin-top: 20px;
-  position: relative;
-}
-.home-we-can .center-width .home-title .home-title-bottom:before {
-  content: '';
-  border-bottom: 2px solid #000000;
-  width: 85px;
-  display: block;
-  position: absolute;
-  left: -85px;
-}
-.home-we-can .center-width .home-title .home-title-bottom:after {
-  content: '';
-  border-bottom: 2px solid #000000;
-  width: 85px;
-  position: absolute;
-  right: -85px;
-}
-.home-we-can .center-width .home-title.white {
-  color: #ffffff;
-}
-.home-we-can .center-width .home-title.dark {
-  color: #323232;
-}
 .home-we-can .center-width .list .item:hover {
   -webkit-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   -moz-transform: scale(1.1, 1.1);
   -o-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-}
-.home-we-can .center-width .list .item:last-child {
-  margin-right: 0px;
 }
 .we-can-1 {
   background-image: url("../images/we_can_1.png");
@@ -436,5 +395,103 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
   margin-right: 31px;
+}
+/* ************** home title  **************** */
+.home-title {
+  text-align: center;
+  padding: 76px 0 80px 0;
+  /*------------ --------- ----------*/
+  /*------------ --------- ----------*/
+}
+.home-title .home-title-main {
+  font-size: 36px;
+}
+.home-title .home-title-second {
+  font-size: 26px;
+}
+.home-title .home-title-bottom {
+  border-bottom: 2px solid #ffffff;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.home-title .home-title-bottom:before {
+  content: '';
+  border-bottom: 2px solid #000000;
+  width: 85px;
+  display: block;
+  position: absolute;
+  left: -85px;
+}
+.home-title .home-title-bottom:after {
+  content: '';
+  border-bottom: 2px solid #000000;
+  width: 85px;
+  position: absolute;
+  right: -85px;
+}
+.home-title .home-title-bottom.white-red {
+  border-bottom: 2px solid red;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.home-title .home-title-bottom.white-red:before {
+  content: '';
+  border-bottom: 2px solid #ffffff;
+  width: 85px;
+  display: block;
+  position: absolute;
+  left: -85px;
+}
+.home-title .home-title-bottom.white-red:after {
+  content: '';
+  border-bottom: 2px solid #ffffff;
+  width: 85px;
+  position: absolute;
+  right: -85px;
+}
+.home-title.white {
+  color: #ffffff;
+}
+.home-title.dark {
+  color: #323232;
+}
+/* ************** home product flow **************** */
+.home-product-flow {
+  background-image: url("../images/we_can_bg.png");
+  background-repeat: no-repeat;
+}
+.flow {
+  margin-top: 100px;
+  padding-bottom: 76px;
+  position: relative;
+}
+.flow .flow-bone {
+  display: block;
+  width: 913px;
+  margin: 0 auto;
+}
+.flow .flow-node {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.flow .flow-analysis {
+  background-image: url("../images/flow_analysis.png");
+}
+.flow .flow-plan {
+  background-image: url("../images/flow_plan.png");
+}
+.flow .flow-design {
+  background-image: url("../images/flow_design.png");
+}
+.flow .flow-develop {
+  background-image: url("../images/flow_develop.png");
+}
+.flow .flow-test {
+  background-image: url("../images/flow_test.png");
 }
 /*# sourceMappingURL=ykofficial.css.map */
