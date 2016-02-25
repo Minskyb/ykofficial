@@ -7,6 +7,7 @@ requirejs.config({
     baseUrl:'js/lib',
     paths:{
         app:'../app',
+        dataService:'../app/config/dataService',
         /********************************
          *       插件
          ********************************/

@@ -4,7 +4,14 @@
 'use strict';
 
 requirejs(['./common'],function(){
-    requirejs(['jquery','BModule','app/component/header','extra'],function($,BM,cHeader){
+    requirejs([
+        'jquery',
+        'BModule',
+        'app/component/header',
+        'app/component/logoMenu',
+        'app/component/slider',
+        'extra'
+    ],function($,BM,cHeader,cLogoMenu,cSlider){
 
         function Index(options){
 
@@ -17,7 +24,10 @@ requirejs(['./common'],function(){
 
             BM.prototype.initProperty.call(this);
             this.views = {
-                '.js-c-header':cHeader
+                '.js-c-header':cHeader,
+                '.js-c-logoMenu':cLogoMenu,
+                '.js-c-slider':cSlider
+
             }
         }
 

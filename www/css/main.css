@@ -1,1 +1,261 @@
+/* base color */
+/* header color */
+/* icon's width and height */
+/* the center show zone */
+/* slider nav color */
+/* modal */
+/* logoMenu */
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "微软雅黑", "宋体", SimHei, arial;
+  font-size: 16px;
+  line-height: 110%;
+}
+.center-width {
+  display: block;
+  width: 1100px;
+  margin: 0 auto;
+}
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.no-text-decoration {
+  text-decoration: none;
+  color: #000000;
+}
+.list {
+  display: table;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.list-inline .item {
+  display: inline-block;
+  float: left;
+}
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 18px;
+  vertical-align: bottom;
+  background-position: center;
+}
+.icon_phone {
+  background-image: url("../images/i_phone.png");
+}
+.icon_qq {
+  background-image: url("../images/i_qq.png");
+}
+.icon_wb {
+  background-image: url("../images/i_wb.png");
+}
+.icon_wx {
+  background-image: url("../images/i_wx.png");
+}
+.icon_email {
+  background-image: url("../images/i_email.png");
+}
+.header {
+  background-color: black;
+  color: #6B6B6B;
+}
+.header .contact {
+  float: right;
+}
+.header .contact .item {
+  padding: 15px 5px;
+  cursor: pointer;
+  *cursor: hand;
+}
+.slider {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.slider > .slider-canvas {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slider > .slider-canvas > .slider-page {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.slider > .slider-canvas > .slider-page .full {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slider > .slider-previous {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 15px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+  *cursor: hand;
+}
+.slider > .slider-next {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  right: 15px;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor: pointer;
+  *cursor: hand;
+}
+.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.15s linear;
+  -ms-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.modal-open {
+  overflow: hidden;
+  padding-right: 17px;
+}
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.modal.in {
+  z-index: 1050;
+}
+.modal > .modal-dialog {
+  display: block;
+  width: 640px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+.modal.fade > .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -moz-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -ms-transition: -ms-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in > .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.modal-backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: -1;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  display: block;
+  z-index: 1000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.modal-measure-scrollbar {
+  display: block;
+  width: 1px;
+  height: 200%;
+  overflow: scroll;
+}
+.logo-menu .menu {
+  float: right;
+}
+.logo-menu .menu .item {
+  height: 98px;
+  line-height: 98px;
+  width: 84px;
+  text-align: center;
+  cursor: pointer;
+  *cursor: hand;
+}
+.logo-menu .menu .item.active {
+  background-color: #f26451;
+  color: white;
+}
+.logo-menu .menu .item:hover {
+  background-color: #f26451;
+  color: white;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.logo-menu .logo {
+  float: left;
+  vertical-align: bottom;
+}
+.logo-menu .logo .logo-icon {
+  height: 98px;
+  width: 87px;
+  background-image: url("../images/logo_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 18px;
+}
+.logo-menu .logo .logo-name {
+  height: 98px;
+  width: 118px;
+  background-image: url("../images/logo_name.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /*# sourceMappingURL=ykofficial.css.map */

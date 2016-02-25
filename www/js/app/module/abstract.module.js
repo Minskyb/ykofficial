@@ -28,10 +28,10 @@ define(['underscore','jquery'],function(_,$){
         $.each(this.views,function(K,V){
 
             if(K && 'function'== typeof V){
-                that.components.push(new V({$wrapper:$(K,that.$element)}));
+                that.components.push(new V({$wrapper:$(K)}));
             }
             else if(K && 'object' == typeof V){
-                var options = $.extend(true,{$wrapper:$(K,that.$element)}, V.option);
+                var options = $.extend(true,{$wrapper:$(K)}, V.option);
                 that.components.push(new V.Func(options));
             }
             else {
@@ -43,8 +43,8 @@ define(['underscore','jquery'],function(_,$){
     BModule.prototype.render = function(){
 
         this.initComponents();
-        this.components.forEach(function(item){
-            item.render();
+        $.each(this.components,function(K,V){
+            V.render();
         });
     }
 

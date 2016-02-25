@@ -1,0 +1,13 @@
+<div class="slider" style="height: 100%">
+    <div class="slider-canvas">
+        <%
+        var slider;
+        for(var i = 0,len = sliders.length ; i < len ; i++){
+            slider = sliders[i];
+        %>
+        <div class="slider-page">
+            <img src="<%=slider.url%>" class="full">
+        </div>
+        <%}%>
+    </div>
+</div>

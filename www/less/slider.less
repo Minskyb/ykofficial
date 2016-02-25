@@ -1,0 +1,52 @@
+.slider{
+  display: block;
+  position: relative;
+  overflow:hidden;
+}
+
+.slider>.slider-canvas{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slider>.slider-canvas>.slider-page{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  float: left;
+  .full{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.slider>.slider-previous{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 15px;
+  border-left: 3px solid @slider-previous-next-color;
+  border-bottom: 3px solid @slider-previous-next-color;
+
+  .transform-rotate(45deg);
+  .cursor-hand();
+}
+
+.slider>.slider-next{
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  right: 15px;
+  border-right: 3px solid @slider-previous-next-color;
+  border-top: 3px solid @slider-previous-next-color;
+  .transform-rotate(45deg);
+  .cursor-hand();
+}

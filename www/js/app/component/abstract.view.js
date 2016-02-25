@@ -59,6 +59,18 @@ define(['underscore','jquery'],function(_,$){
 
     };
 
+    /* 界面呈现 */
+    BView.prototype.render = function(){
+
+        if(!this.$element){
+            this.renderImmediately = true;
+            return;
+        }
+
+        this.$wrapper.empty();
+        this.$wrapper.append(this.$element);
+    };
+
     /* template 模板解析 */
     BView.prototype.parse = function(){
 
@@ -76,7 +88,7 @@ define(['underscore','jquery'],function(_,$){
 
         if(!this.events) return;
 
-        var regExp = /^((\.|#)\w+)\s(\w+)$/
+        var regExp = /^((\.|#).+)\s(\w+)$/
             ,arr
             ,selector
             ,eventType
@@ -87,7 +99,7 @@ define(['underscore','jquery'],function(_,$){
         $.each(this.events,function(k,v){
 
             arr = k.match(regExp);
-            if(!arr || arr.length != 3) {
+            if(!arr || arr.length != 4) {
                 console.error("this.views 事件类型正则表达式解析失败！");
                 return
             }
@@ -106,18 +118,6 @@ define(['underscore','jquery'],function(_,$){
     BView.prototype.removeEvent = function(){
 
         this.$element.undelegate();
-    }
-
-    /* 界面呈现 */
-    BView.prototype.render = function(){
-
-        if(!this.$element){
-            this.renderImmediately = true;
-            return;
-        }
-
-        this.$wrapper.empty();
-        this.$wrapper.append(this.$element);
     }
 
     /* 模板数据更新 */

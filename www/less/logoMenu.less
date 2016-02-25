@@ -1,0 +1,40 @@
+.logo-menu{
+  .menu{
+    float: right;
+    .item{
+      height: @logo-menu-menu-height;
+      line-height: @logo-menu-menu-height;
+      width: @logo-menu-menu-width;
+      text-align: center;
+      .cursor-hand;
+    }
+    .item.active{
+      background-color: @logo-menu-menu-active-background-color;
+      color:@logo-menu-menu-active-font-color ;
+    }
+    .item:hover{
+      background-color: @logo-menu-menu-active-background-color;
+      color:@logo-menu-menu-active-font-color ;
+      .transition(0.5s);
+    }
+  }
+  .logo{
+    float: left;
+    vertical-align: bottom;
+    .logo-icon{
+      height:@logo-menu-menu-height ;
+      width: 87px;
+      background-image: url("../images/logo_icon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 18px;
+    }
+    .logo-name{
+      height:@logo-menu-menu-height ;
+      width: 118px;
+      background-image: url("../images/logo_name.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
