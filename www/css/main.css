@@ -30,6 +30,11 @@ body {
   text-decoration: none;
   color: #000000;
 }
+.full {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .list {
   display: table;
   list-style-type: none;
@@ -257,5 +262,50 @@ body {
   background-image: url("../images/logo_name.png");
   background-repeat: no-repeat;
   background-position: center;
+}
+.home-page-introduction {
+  padding: 40px 0 60px 0;
+}
+.home-page-introduction .item {
+  width: 346px;
+  height: 346px;
+  margin-right: 17px;
+  overflow: hidden;
+  position: relative;
+}
+.home-page-introduction .item:last-child {
+  margin-right: 0px;
+}
+.home-page-introduction .item::after {
+  display: block;
+  width: 346px;
+  height: 96px;
+  line-height: 96px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #6B6B6B;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: absolute;
+  bottom: -96px;
+  left: 0;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.home-page-introduction .item:nth-child(1)::after {
+  content: '个性化健康管理';
+}
+.home-page-introduction .item:nth-child(2)::after {
+  content: '智慧医疗产品';
+}
+.home-page-introduction .item:nth-child(3)::after {
+  content: '医疗App';
+}
+.home-page-introduction .item:hover::after {
+  bottom: 0;
 }
 /*# sourceMappingURL=ykofficial.css.map */

@@ -9,9 +9,10 @@ requirejs(['./common'],function(){
         'BModule',
         'app/component/header',
         'app/component/logoMenu',
-        'app/component/slider',
+        'app/component/home_main_slider',
+        'app/component/home_product_introduction',
         'extra'
-    ],function($,BM,cHeader,cLogoMenu,cSlider){
+    ],function($,BM,cHeader,cLogoMenu,cHMSlider,cHPIntroduction){
 
         function Index(options){
 
@@ -26,7 +27,8 @@ requirejs(['./common'],function(){
             this.views = {
                 '.js-c-header':cHeader,
                 '.js-c-logoMenu':cLogoMenu,
-                '.js-c-slider':cSlider
+                '.js-c-slider':cHMSlider,
+                '.js-c-product-introduction':cHPIntroduction
 
             }
         }

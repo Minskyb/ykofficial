@@ -6,31 +6,31 @@
 define([
     'jquery',
     'BView',
-    'text!app/component/slider.html',
-    'app/config/dataService',
+    'text!app/component/home_main_slider.html',
+    'dataService',
     'extra',
     'slider'
 ],function($,BV,template,dataService){
 
-    function Slider(options){
+    function HMSlider(options){
         BV.call(this,options);
     }
 
-    Slider.prototype = $.YK_OFFICIAL.inheritPrototype(BV.prototype);
+    HMSlider.prototype = $.YK_OFFICIAL.inheritPrototype(BV.prototype);
 
-    Slider.prototype.initProperty = function(){
+    HMSlider.prototype.initProperty = function(){
 
         BV.prototype.initProperty.call(this);
 
         this.template = template;
     }
 
-    Slider.prototype.initData = function(){
+    HMSlider.prototype.initData = function(){
 
         var that = this;
 
         $.ajax({
-            url:dataService.getSliderImage,
+            url:dataService.getPicList,
             type:'post',
             data:{type:1},
             beforeSend:function(xhr){
@@ -45,12 +45,12 @@ define([
                 $.YK_OFFICIAL.create(that);
             },
             error:function(e){
-                alert(JSON.stringify(e));
+                alert('Home Main Slider Picture Request Fail'+JSON.stringify(e));
             }
         });
     };
 
-    Slider.prototype.render = function(){
+    HMSlider.prototype.render = function(){
 
         if(!this.$element){
             this.renderImmediately = true;
@@ -67,5 +67,5 @@ define([
     }
 
 
-    return Slider;
+    return HMSlider;
 });

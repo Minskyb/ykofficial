@@ -1,0 +1,42 @@
+.home-page-introduction{
+  padding: 40px 0 60px 0;
+  .item{
+    width: 346px;
+    height: 346px;
+    margin-right: 17px;
+    overflow: hidden;
+    position: relative;
+  }
+  .item:last-child{
+    margin-right: 0px;
+  }
+  .item::after{
+    display: block;
+    width: 346px;
+    height: 96px;
+    line-height: 96px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #6B6B6B;
+    .opacity(0.5);
+    position: absolute;
+    bottom: -96px;
+    left: 0;
+    .transition(0.5s);
+  }
+  .item:nth-child(1)::after{
+    content: '个性化健康管理';
+  }
+  .item:nth-child(2)::after{
+    content: '智慧医疗产品';
+  }
+  .item:nth-child(3)::after{
+    content: '医疗App';
+  }
+  
+  .item:hover::after{
+    bottom: 0;
+  }
+
+}

@@ -1,0 +1,11 @@
+<div class="center-width">
+    <ul class="home-page-introduction list list-inline">
+        <%
+        var pic ;
+        for(var i = 0,len = picList.length ; i < len ; i++){
+            pic = picList[i];
+        %>
+        <li class="item"><img src="<%=pic.url%>" class="full"></li>
+        <%}%>
+    </ul>
+</div>

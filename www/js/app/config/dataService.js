@@ -11,7 +11,7 @@ define([],function(){
 
         version:'1.0.0',
 
-        getSliderImage:host+'/hp/Home/index/piclist',
+        getPicList:host+'/hp/Home/index/piclist',
 
         aboutAs:host+'/hp/Home/Aboutus/getaboutus',
 
