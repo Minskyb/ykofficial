@@ -5,6 +5,7 @@
 /* slider nav color */
 /* modal */
 /* logoMenu */
+/* home we can */
 body,
 html {
   padding: 0;
@@ -13,7 +14,6 @@ html {
 body {
   font-family: "微软雅黑", "宋体", SimHei, arial;
   font-size: 16px;
-  line-height: 110%;
 }
 .center-width {
   display: block;
@@ -263,6 +263,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+/* ************** product introduction  **************** */
 .home-page-introduction {
   padding: 40px 0 60px 0;
 }
@@ -296,16 +297,144 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.home-page-introduction .item:nth-child(1)::after {
+.home-page-introduction .item:nth-child(1):after {
   content: '个性化健康管理';
 }
-.home-page-introduction .item:nth-child(2)::after {
+.home-page-introduction .item:nth-child(2):after {
   content: '智慧医疗产品';
 }
-.home-page-introduction .item:nth-child(3)::after {
+.home-page-introduction .item:nth-child(3):after {
   content: '医疗App';
 }
-.home-page-introduction .item:hover::after {
+.home-page-introduction .item:hover:after {
   bottom: 0;
+}
+/* ************** we can  **************** */
+.home-we-can {
+  background-color: #f26451;
+  padding-bottom: 93px;
+}
+.home-we-can .center-width .home-title {
+  text-align: center;
+  padding: 76px 0 80px 0;
+}
+.home-we-can .center-width .home-title .home-title-main {
+  font-size: 36px;
+}
+.home-we-can .center-width .home-title .home-title-second {
+  font-size: 26px;
+}
+.home-we-can .center-width .home-title .home-title-bottom {
+  border-bottom: 2px solid #ffffff;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.home-we-can .center-width .home-title .home-title-bottom:before {
+  content: '';
+  border-bottom: 2px solid #000000;
+  width: 85px;
+  display: block;
+  position: absolute;
+  left: -85px;
+}
+.home-we-can .center-width .home-title .home-title-bottom:after {
+  content: '';
+  border-bottom: 2px solid #000000;
+  width: 85px;
+  position: absolute;
+  right: -85px;
+}
+.home-we-can .center-width .home-title.white {
+  color: #ffffff;
+}
+.home-we-can .center-width .home-title.dark {
+  color: #323232;
+}
+.home-we-can .center-width .list .item:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.home-we-can .center-width .list .item:last-child {
+  margin-right: 0px;
+}
+.we-can-1 {
+  background-image: url("../images/we_can_1.png");
+  width: 195px;
+  height: 195px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 31px;
+}
+.we-can-2 {
+  background-image: url("../images/we_can_2.png");
+  width: 195px;
+  height: 195px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 31px;
+}
+.we-can-3 {
+  background-image: url("../images/we_can_3.png");
+  width: 195px;
+  height: 195px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 31px;
+}
+.we-can-4 {
+  background-image: url("../images/we_can_4.png");
+  width: 195px;
+  height: 195px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 31px;
+}
+.we-can-5 {
+  background-image: url("../images/we_can_5.png");
+  width: 195px;
+  height: 195px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-right: 31px;
 }
 /*# sourceMappingURL=ykofficial.css.map */
