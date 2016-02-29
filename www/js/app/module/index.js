@@ -11,8 +11,9 @@ requirejs(['./common'],function(){
         'app/component/logoMenu',
         'app/component/home_main_slider',
         'app/component/home_product_introduction',
+        'app/component/home_team_thumbnail',
         'extra'
-    ],function($,BM,cHeader,cLogoMenu,cHMSlider,cHPIntroduction){
+    ],function($,BM,cHeader,cLogoMenu,cHMSlider,cHPIntroduction,CHTThumbnail){
 
         function Index(options){
 
@@ -28,7 +29,8 @@ requirejs(['./common'],function(){
                 '.js-c-header':cHeader,
                 '.js-c-logoMenu':cLogoMenu,
                 '.js-c-slider':cHMSlider,
-                '.js-c-product-introduction':cHPIntroduction
+                '.js-c-product-introduction':cHPIntroduction,
+                '.js-c-team-thumbnail':CHTThumbnail
             }
         }
 

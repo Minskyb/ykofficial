@@ -15,6 +15,9 @@ body {
   font-family: "微软雅黑", "宋体", SimHei, arial;
   font-size: 16px;
 }
+.indent-2em {
+  text-indent: 2em;
+}
 .center-width {
   display: block;
   width: 1100px;
@@ -159,15 +162,12 @@ body {
   padding-right: 17px;
 }
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
-}
-.modal.in {
   z-index: 1050;
 }
 .modal > .modal-dialog {
@@ -401,7 +401,8 @@ body {
   text-align: center;
   padding: 76px 0 80px 0;
   /*------------ --------- ----------*/
-  /*------------ --------- ----------*/
+  /*------------ white-red ----------*/
+  /*------------ grey-red ----------*/
 }
 .home-title .home-title-main {
   font-size: 36px;
@@ -453,6 +454,28 @@ body {
   position: absolute;
   right: -85px;
 }
+.home-title .home-title-bottom.grey-red {
+  border-bottom: 2px solid red;
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.home-title .home-title-bottom.grey-red:before {
+  content: '';
+  border-bottom: 2px solid #C9C9C9;
+  width: 85px;
+  display: block;
+  position: absolute;
+  left: -85px;
+}
+.home-title .home-title-bottom.grey-red:after {
+  content: '';
+  border-bottom: 2px solid #C9C9C9;
+  width: 85px;
+  position: absolute;
+  right: -85px;
+}
 .home-title.white {
   color: #ffffff;
 }
@@ -465,7 +488,7 @@ body {
   background-repeat: no-repeat;
 }
 .flow {
-  margin-top: 100px;
+  margin-top: 50px;
   padding-bottom: 76px;
   position: relative;
 }
@@ -478,20 +501,118 @@ body {
   display: block;
   position: absolute;
   background-repeat: no-repeat;
+  width: 118px;
+  height: 118px;
+  -webkit-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.flow .flow-node:after {
+  display: block;
+  position: absolute;
+  font-size: 28px;
+  color: #fffefe;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.flow .flow-node:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.flow .flow-node:hover:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .flow .flow-analysis {
+  top: -30px;
+  left: 20px;
   background-image: url("../images/flow_analysis.png");
 }
+.flow .flow-analysis:after {
+  content: '调研分析';
+  top: -65px;
+}
 .flow .flow-plan {
+  top: 155px;
+  left: 260px;
   background-image: url("../images/flow_plan.png");
 }
+.flow .flow-plan:after {
+  content: '产品策划';
+  top: 145px;
+}
 .flow .flow-design {
+  top: -10px;
+  left: 465px;
   background-image: url("../images/flow_design.png");
 }
+.flow .flow-design:after {
+  content: 'UI设计';
+  left: 15px;
+  top: -60px;
+}
 .flow .flow-develop {
+  top: -55px;
+  left: 740px;
   background-image: url("../images/flow_develop.png");
 }
+.flow .flow-develop:after {
+  content: '技术开发';
+  top: 135px;
+}
 .flow .flow-test {
+  top: 130px;
+  left: 930px;
   background-image: url("../images/flow_test.png");
+}
+.flow .flow-test:after {
+  content: '测试';
+  left: 145px;
+  top: 35px;
+  width: 80px;
+}
+.flow .flow-online {
+  top: 280px;
+  left: 735px;
+  background-image: url("../images/flow_online.png");
+}
+.flow .flow-online:after {
+  content: '完成上线';
+  left: -140px;
+  top: 40px;
+}
+.team-thumbnail .item {
+  width: 270px;
+  height: 208px;
+  margin-right: 5px;
+}
+.home-about-us .caption .item {
+  width: 268px;
+  margin-right: 5px;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #C0C0C0;
+}
+.home-about-us .caption .item .main-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #282a30;
+  line-height: 30px;
+  height: 30px;
+}
+.home-about-us .caption .item .second-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #888888;
 }
 /*# sourceMappingURL=ykofficial.css.map */

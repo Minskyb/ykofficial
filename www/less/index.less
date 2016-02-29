@@ -123,7 +123,7 @@
   .home-title-bottom:after{
     .home-title-bottom-after(#000000);
   }
-  /*------------ --------- ----------*/
+  /*------------ white-red ----------*/
   .home-title-bottom.white-red{
     .home-title-bottom(red);
   }
@@ -132,6 +132,16 @@
   }
   .home-title-bottom.white-red:after{
     .home-title-bottom-after(#ffffff);
+  }
+  /*------------ grey-red ----------*/
+  .home-title-bottom.grey-red{
+    .home-title-bottom(red);
+  }
+  .home-title-bottom.grey-red:before{
+    .home-title-bottom-before(#C9C9C9);
+  }
+  .home-title-bottom.grey-red:after{
+    .home-title-bottom-after(#C9C9C9);
   }
 }
 .home-title.white{
@@ -147,7 +157,7 @@
   background-repeat: no-repeat;
 }
 .flow{
-  margin-top: 100px;
+  margin-top: 50px;
   padding-bottom: 76px;
   position: relative;
   .flow-bone{
@@ -159,23 +169,112 @@
     display: block;
     position: absolute;
     background-repeat: no-repeat;
+    width: 118px;
+    height: 118px;
+    .transition(0.5s);
+    &:after{
+      display: block;
+      position: absolute;
+      font-size: 28px;
+      color: #fffefe;
+      .opacity(0);
+      .transition(0.3s);
+    }
+    &:hover{
+      .transform-scale(1.1,1.1);
+      &:after{
+        .opacity(1);
+      }
+    }
   }
   .flow-analysis{
+    top: -30px;
+    left: 20px;
     background-image: url("../images/flow_analysis.png");
+    &:after{
+      content: '调研分析';
+      top: -65px;
+    }
   }
   .flow-plan{
+    top: 155px;
+    left: 260px;
     background-image: url("../images/flow_plan.png");
+    &:after{
+      content: '产品策划';
+      top: 145px;
+    }
   }
   .flow-design{
+    top: -10px;
+    left: 465px;
     background-image: url("../images/flow_design.png");
+    &:after{
+      content: 'UI设计';
+      left: 15px;
+      top: -60px;
+    }
   }
   .flow-develop{
+    top: -55px;
+    left: 740px;
     background-image: url("../images/flow_develop.png");
+    &:after{
+      content: '技术开发';
+      top:135px;
+    }
   }
   .flow-test{
+    top: 130px;
+    left: 930px;
     background-image: url("../images/flow_test.png");
+    &:after{
+      content: '测试';
+      left: 145px;
+      top: 35px;
+      width: 80px;
+    }
   }
   .flow-online{
+    top: 280px;
+    left: 735px;
+    background-image: url("../images/flow_online.png");
+    &:after{
+      content: '完成上线';
+      left: -140px;
+      top: 40px;
+    }
+  }
+}
 
+.team-thumbnail{
+  .item{
+    width: 270px;
+    height: 208px;
+    margin-right: 5px;
+  }
+}
+
+.home-about-us{
+  .caption{
+    .item{
+      width: 268px;
+      margin-right: 5px;
+      text-align: center;
+      padding: 10px 0;
+      border: 1px solid #C0C0C0;
+      .main-title{
+        font-size: 18px;
+        font-weight: bold;
+        color: #282a30;
+        line-height: 30px;
+        height: 30px;
+      }
+      .second-title{
+        font-size: 14px;
+        font-weight: bold;
+        color: #888888;
+      }
+    }
   }
 }

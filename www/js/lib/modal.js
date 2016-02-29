@@ -34,22 +34,23 @@
         if(this.isShown) return;
         this.isShown = true;
 
-        var paddingRight = this.measureScrollbar();
+        //var paddingRight = this.measureScrollbar();
         // 如何屏蔽 body 的滚动条，并且在需要的时候给 modal 添加滚动条
         //this.resetScrollbar();
-        this.$body.addClass('modal-open');
+        //this.$body.addClass('modal-open');
 
 
-        this.$element.on('click.dismiss.bt.modal','[data-dismiss="modal"]', $.proxy(this.hide,this));
+        /* 点击 × 符号 */
+        //this.$element.on('click.dismiss.bt.modal','[data-dismiss="modal"]', $.proxy(this.hide,this));
+
         //this.$dialog.on('mousedown.dismiss.bt.modal',function(){
         //    self.$element.one('mouseup.dismiss.bt.modal',function(e){
         //       self.ignoreBackdropClick = true;
         //    });
         //});
 
-        this.backdrop(function(){
 
-        });
+        this.backdrop(function(){});
     }
 
     Modal.prototype.hide = function(_relatedTarget){
@@ -61,7 +62,7 @@
             .removeClass('in')
             .off('dismiss.bt.modal');
         this.isShown = false;
-        //this.$element.hide();
+        this.$element.hide();
         this.$body.removeClass('modal-open');
         this.removeBackdrop();
     }
@@ -85,8 +86,7 @@
         });
 
         this.$backdrop.addClass('in');
-        this.$element.addClass('in');
-        this.$element.show();
+        this.$element.show(100).addClass('in');
     }
 
     Modal.prototype.removeBackdrop = function(){
@@ -131,7 +131,7 @@
 
     $.fn.modal = Plugin;
 
-    // MODAL   AUTO-INIT
+    // MODAL   AUTO-INITd
     // 为了兼容 Bolt 框架，顶层事件监听，我们采用 $(document.body) 而非 $(document)
     // 是因为：采用 $(document) 监听的事件无法再 Bolt 框架中多模块之间共用。
     $(document.body).on('click.bt.modal.auto-init','[data-toggle="modal"]',function(e){
