@@ -44,6 +44,9 @@ define([
                 }
 
                 $.YK_OFFICIAL.create(that);
+            },
+            error:function(e){
+                console.error('Team thumbnail img request fail '+JSON.stringify(e));
             }
         });
     }

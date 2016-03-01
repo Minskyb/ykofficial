@@ -37,7 +37,11 @@ module.exports = function(grunt){
                         {
                             name:'../app/module/index',
                             include:[
-                                'app/component/header'
+                                'app/component/header',
+                                'app/component/logoMenu',
+                                'app/component/home_main_slider',
+                                'app/component/home_product_introduction',
+                                'app/component/home_team_thumbnail'
                             ],
                             exclude:[
                                 '../app/module/common'
