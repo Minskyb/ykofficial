@@ -81,8 +81,13 @@
         this.$backdrop.addClass('modal-backdrop fade')
             .appendTo(this.$body);
 
+
         this.$element.on('click.dismiss.bt.modal',function(e){
-           if($(e.target).is(self.$element) ) self.hide();
+           if($(e.target).is(self.$element[0]) ) self.hide();
+        });
+        /*兼容IE8 浏览器，通过上面的方法 IE8只能监听到 content 内部的点击事件，而无法监听到 content 以外的事件*/
+        this.$backdrop.on("click",function(e){
+            self.hide();
         });
 
         this.$backdrop.addClass('in');

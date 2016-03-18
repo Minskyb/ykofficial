@@ -1,0 +1,19 @@
+.btn{
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  padding: 12px 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 2px 2px 1px 0 #C0C0C0;
+  .transition(0.2s);
+  .cursor-hand();
+  .opacity(0.9);
+}
+.btn-danger{
+  background-color: @btn-danger-background-color;
+  color: @btn-danger-font-color;
+  &:hover{
+    .opacity(1) ;
+  }
+}

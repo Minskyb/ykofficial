@@ -7,12 +7,71 @@ module.exports = function(grunt){
 
     grunt.initConfig({
         pkg:grunt.file.readJSON('package.json'),
+        build_dest:'www_build',
         banner:'/**\n' +
         '* <%=pkg.name%> v <%=pkg.version%>'+
         '*/',
         clean:{
             build:'www_build',
-            css:'www/css'
+            css:'www/css',
+            images:'www_build/images'
+        },
+        concat:{
+            built:{
+                src:[
+                    'www/css/main.css',
+                    'www/js/lib/fullPage/fullPage.css'
+                ],
+                dest:'www/css/main.css'
+            }
+        },
+        cssmin:{
+           build:{
+               files:[{
+                   expand:true,
+                   cwd:'<%=build_dest%>/css',
+                   src:'*.css',
+                   dest:'<%=build_dest%>/css',
+                   ext:'.min.css',
+                   extDot:'last'
+
+               }]
+           }
+        },
+        imagemin:{
+            build:{
+                options:{
+                    optimizationLevel: 7,
+                    pngquant: true
+                },
+                files:[{
+                    expand:true,
+                    cwd:'www',
+                    dest:'<%=build_dest%>/',
+                    src:'images/*.{png,jpg,jpeg,gif,webp,svg}'
+                }]
+            }
+        },
+        htmlmin:{
+            options:{
+                removeComments:true,
+                removeCommentsFromCDATA:true,
+                collapseWhitespace: true,
+                collapseBooleanAttributes: true,
+                removeAttributeQuotes: true,
+                removeRedundantAttributes: true,
+                useShortDoctype: true,
+                removeEmptyAttributes: true,
+                removeOptionalTags: true
+            },
+            build:{
+                files:[{
+                    expand:true,
+                    cwd:'<%=build_dest%>',
+                    dest:'<%=build_dest%>',
+                    src:'*.html'
+                }]
+            }
         },
         requirejs:{
             options:{
@@ -22,7 +81,7 @@ module.exports = function(grunt){
                 options:{
                     appDir:'www',
                     mainConfigFile:'www/js/app/module/common.js',
-                    dir:'www_build',
+                    dir:'<%=build_dest%>',
                     modules:[
                         {
                             name:'../app/module/common',
@@ -31,17 +90,27 @@ module.exports = function(grunt){
                                 'BView',
                                 'BModule',
                                 'text',
-                                'extra'
+                                'extra',
+                                'modal'
                             ]
                         },
                         {
-                            name:'../app/module/index',
+                            name:'../app/module/home',
                             include:[
                                 'app/component/header',
                                 'app/component/logoMenu',
                                 'app/component/home_main_slider',
                                 'app/component/home_product_introduction',
                                 'app/component/home_team_thumbnail'
+                            ],
+                            exclude:[
+                                '../app/module/common'
+                            ]
+                        },
+                        {
+                            name:'../app/module/product_centre',
+                            include:[
+                                'fullPage'
                             ],
                             exclude:[
                                 '../app/module/common'
@@ -77,8 +146,8 @@ module.exports = function(grunt){
         },
         watch: {
             less: {
-                files: 'www/less/**/*.less',
-                tasks: ['clean:css','less']
+                files: ['www/less/**/*.less','www/js/lib/fullPage/fullPage.css'],
+                tasks: ['clean:css','less','concat']
             }
         }
     });
@@ -88,12 +157,18 @@ module.exports = function(grunt){
     grunt.registerTask('default',[
         'clean:css',
         'less',
+        'concat',
         'watch'
     ]);
 
     grunt.registerTask('build',[
         'clean:build',
         'less',
-        'requirejs'
+        'concat',
+        'requirejs',
+        'cssmin',
+        'clean:images',
+        'imagemin',
+        'htmlmin'
     ])
 }
