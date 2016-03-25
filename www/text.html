@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(113.927337,22.504855);
+    map.centerAndZoom(point, 18);
+
+    var marker = new BMap.Marker(point); // 创建点
+    marker.enableDragging();
+
+    map.addOverlay(marker);    //增加点
+</script>
+</body>
+</html>

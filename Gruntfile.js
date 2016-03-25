@@ -19,8 +19,8 @@ module.exports = function(grunt){
         concat:{
             built:{
                 src:[
-                    'www/css/main.css',
-                    'www/js/lib/fullPage/fullPage.css'
+                    'www/css/main.css'
+                    //'www/js/lib/fullPage/fullPage.css'
                 ],
                 dest:'www/css/main.css'
             }
@@ -168,7 +168,7 @@ module.exports = function(grunt){
         'requirejs',
         'cssmin',
         'clean:images',
-        'imagemin',
+        //'imagemin',
         'htmlmin'
     ])
 }

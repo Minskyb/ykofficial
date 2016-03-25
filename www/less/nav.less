@@ -1,0 +1,38 @@
+.nav-top{
+  position: fixed;z-index: 1000;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #EDEDED;
+
+  .logo{
+    float: left;
+    padding: 10px 0;
+    font-size: 24px;
+    color: #5DD39A;
+  }
+
+  .menu{
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style:none;
+
+    &>li{
+      display: inline-block;
+
+      a{
+        display: inline-block;
+        padding: 15px 5px 16px 5px;
+        text-decoration: none;
+        color: #333;
+
+        &:hover{
+          background-color: #EDEDED;
+        }
+        &.active{
+          color:#5399B5
+        }
+      }
+    }
+  }
+}

@@ -3,156 +3,188 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="有康私家医生,有康,互联网医疗,医疗"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>有康官网</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="js/lib/punk/css/punk.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RVhalK9siqARKpOAv1uXdKFL"></script>
 </head>
-<body>
+<body style="overflow-x: hidden">
+    <div class="nav-top" >
+       <div class="pk-container">
+           <div class="logo">有康私家医生</div>
+           <ul class="menu">
+               <li><a href="#page1" class="active">首页</a></li>
+               <li><a href="#page2">健康自检</a></li>
+               <li><a href="#page3">私家医生</a></li>
+               <li><a href="#page4">上门医生</a></li>
+               <li><a href="#page5">线上问询</a></li>
+               <li><a href="#page6">下载App</a></li>
+               <li><a href="#page7">联系我们</a></li>
+           </ul>
+       </div>
+    </div>
 
-    <div class="section section_1">
-        <div class="bg"><img src="./images/bg_pro_p_1.png" class="full"></div>
-        <div class="w1024">
+    <div class="pk-container page1 page" style="padding-top: 53px;text-align: center">
             <div class="header">
-                <h1>有康私家医生</h1>
-                <h5>随时随地呵护你的健康</h5>
+                <h1>选择有康私家医生，就是选择健康<small class="small">上门服务，预约名医等，为您和家人的健康买单</small></h1>
             </div>
-            <div class="download list list-inline">
-                <div class="item" data-toggle="modal" data-target=".modal-download-doctor">
-                    <img src="./images/doctor.png">
-                    <div class="">医生端</div>
-                    <div class="">版本号 V1.1.*</div>
+            <div class="pk-row content">
+                <div class="pk-col-xs-3">
+                    <a href="#page2"><img src="./images/pro_p_6_1.png"></a>
+                    <h3 class="logo">健康自检</h3>
                 </div>
-                <div class="item" data-toggle="modal" data-target=".modal-download-user">
-                    <img src="./images/patient.png">
-                    <div class="">用户端</div>
-                    <div class="">版本号 V1.1.*</div>
+                <div class="pk-col-xs-3">
+                    <a href="#page3"><img src="./images/pro_p_2_3.png"></a>
+                    <h3 class="logo">私家医生</h3>
+                </div>
+                <div class="pk-col-xs-3">
+                    <a href="#page4"><img src="./images/pro_p_2_1.png"></a>
+                    <h3 class="logo">上门医生</h3>
+                </div>
+                <div class="pk-col-xs-3">
+                    <a href="#page5"><img src="./images/pro_p_2_2.png"></a>
+                    <h3 class="logo">线上问询</h3>
                 </div>
             </div>
-            <div class="footer"><h6>免费下载软件（支持安卓和IOS设备下载）</h6></div>
-        </div>
+    </div>
 
-        <div class="modal fade modal-download-doctor">
-            <div class="modal-dialog">
-                <div class="modal-content" style="padding: 100px 0 20px 0;">
-                    <img src="images/doctorMDL.png">
-                    <div class="pc_download">
-                        <a class="doctor_download btn btn-danger" href="https://appsto.re/cn/zRTx_.i" target="_blank">点击下载 IOS 版到电脑</a>
-                        <a class="patient_download btn btn-danger" href="http://112.74.27.30/android/doctor.apk">点击下载 Android 到电脑</a>
-                    </div>
-                </div>
+    <div class="pk-container page2 page">
+        <div class="pk-row">
+            <div class="pk-col-xs-5 animation-box">
+                <img class="animation" src="./images/pro_p_2.png">
             </div>
-        </div>
-        <div class="modal fade modal-download-user">
-            <div class="modal-dialog">
-                <div class="modal-content" style="padding: 100px 0 20px 0;">
-                    <img src="images/userMDL.png">
-                    <div class="pc_download">
-                        <a class="doctor_download btn btn-danger" href="https://appsto.re/cn/GHTx_.i" target="_blank">点击下载 IOS 版到电脑</a>
-                        <a class="patient_download btn btn-danger" href="http://112.74.27.30/android/user.apk">点击下载 Android 到电脑</a>
+            <div class="pk-col-xs-7">
+                    <h1 class="header">健康自检<small class="small">了解自己及家人的健康状况</small></h1>
+                    <div class="pk-row content">
+                        <div class="pk-col-xs-4"><img src="./images/pro_p_2_1.png" class="full"></div>
+                        <div class="pk-col-xs-4"><img src="./images/pro_p_2_2.png" class="full"></div>
+                        <div class="pk-col-xs-4"><img src="./images/pro_p_2_3.png" class="full"></div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
 
-    <div class="section section_2">
-        <div  class="w1024">
-            <div class="list list-inline">
-                <div class="item part_left lf_in js_ani">
-                    <img src="./images/pro_p_2.png" class="full">
-                </div>
-                <div class="item part_right">
-                    <div class="header">
-                        <h1>健康自检</h1>
-                        <h4>了解自己及家人的健康状况</h4>
-                        <div class="list list-inline">
-                            <div class="item"><img src="./images/pro_p_2_1.png" class="full"></div>
-                            <div class="item"><img src="./images/pro_p_2_2.png" class="full"></div>
-                            <div class="item"><img src="./images/pro_p_2_3.png" class="full"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section section_3">
+    <div class="pk-row np">
         <img class="bg" src="./images/bg_pro_p_3.png" class="full">
-        <div class="w1024">
-            <div class="list list-inline">
-                <div class="item part_left">
+        <div class="pk-container page3 page">
+            <div class="pk-row">
+                <div class="pk-col-xs-7">
                     <div class="header">
-                        <h1>私家医生</h1>
-                        <h4>做您和家人的“大白”卫士</h4>
+                        <h1>私家医生<small class="small">做您和家人的“大白”卫士</small></h1>
                     </div>
                 </div>
-                <div class="item part_right rg_in js_ani">
-                    <img src="./images/pro_p_3.png">
+                <div class="pk-col-xs-5 animation-box" >
+                    <img class="animation" src="./images/pro_p_3.png">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section section_4">
-        <div  class="w1024">
-            <div class="list list-inline">
-                <div class="item part_left lf_in js_ani">
-                    <img src="./images/pro_p_4.png" class="full">
-                </div>
-                <div class="item part_right">
-                    <div class="header">
-                        <h1>健康自检</h1>
-                        <h4>了解自己及家人的健康状况</h4>
-                    </div>
+    <div class="pk-container page4 page">
+        <div class="pk-row">
+            <div class="pk-col-xs-5 animation-box">
+                <img class="animation" src="./images/pro_p_4.png">
+            </div>
+            <div class="pk-col-xs-7">
+                <div class="header">
+                    <h1>健康自检<small class="small">了解自己及家人的健康状况</small></h1>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section section_5">
+    <div class="pk-row np">
         <img class="bg" src="./images/bg_pro_p_5.png" class="full">
-        <div class="w1024">
-            <div class="list list-inline">
-                <div class="item part_left">
+        <div class="pk-container page5 page">
+            <div class="pk-row">
+                <div class="pk-col-xs-7">
                     <div class="header">
                         <h1>线上问询</h1>
                         <h4>名医在线，随时随地解决疑难杂惑</h4>
                     </div>
                 </div>
-                <div class="item part_right rg_in js_ani">
-                    <img src="./images/pro_p_5.png">
+                <div class="pk-col-xs-5 animation-box">
+                    <img class="animation" src="./images/pro_p_5.png">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section section_6">
-        <div class="w1024">
+
+    <div class="pk-container">
+        <div class="pk-row page6 page">
             <div class="header">
-                <h1>选择有康私家医生，就是选择健康</h1>
-                <h4>上门服务，预约名医等，为您和家人的健康买单</h4>
+                <h1>有康私家医生<small class="small">随时随地呵护你的健康</small></h1>
             </div>
-            <div class="list list-inline">
-                <div class="item">
-                    <img src="./images/pro_p_2_1.png">
-                    <h5>上门服务</h5>
-                </div>
-                <div class="item">
-                    <img src="./images/pro_p_2_2.png">
-                    <h5>实时咨询</h5>
-                </div>
-                <div class="item">
-                    <img src="./images/pro_p_2_3.png">
-                    <h5>预约名医</h5>
-                </div>
-                <div class="item">
-                    <img src="./images/pro_p_6_1.png">
-                    <h5>健康档案</h5>
+           <div class="pk-row np content">
+               <div class="pk-col-xs-6"  data-toggle="modal" data-target=".modal-download-doctor">
+                   <div class="doctor box">
+                       <img src="./images/doctor.png">
+                       <div class="">医生端</div>
+                       <div class="">版本号 V1.1</div>
+                   </div>
+               </div>
+               <div class="pk-col-xs-6" data-toggle="modal" data-target=".modal-download-user">
+                   <div class="user box">
+                       <img src="./images/patient.png">
+                       <div class="">用户端</div>
+                       <div class="">版本号 V1.1</div>
+                   </div>
+               </div>
+           </div>
+            <h6 class="pk-col-xs-12 footer">免费下载软件（支持安卓和IOS设备下载）</h6>
+        </div>
+    </div>
+
+    <div class="modal fade modal-download-doctor">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding: 100px 0 20px 0;">
+                <img src="images/doctorMDL.png">
+                <div class="pc_download">
+                    <a class="doctor_download btn btn-danger" href="https://appsto.re/cn/zRTx_.i" target="_blank">点击下载 IOS 版到电脑</a>
+                    <a class="patient_download btn btn-danger" href="http://112.74.27.30/android/doctor.apk">点击下载 Android 到电脑</a>
                 </div>
             </div>
         </div>
-        <div class="footer">Copyright © 2015-2016 深圳市有康互联网医疗技术有限公司 All Rights Reserved  京ICP证120150号</div>
+    </div>
+    <div class="modal fade modal-download-user">
+        <div class="modal-dialog">
+            <div class="modal-content" style="padding: 100px 0 20px 0;">
+                <img src="images/userMDL.png">
+                <div class="pc_download">
+                    <a class="doctor_download btn btn-danger" href="https://appsto.re/cn/GHTx_.i" target="_blank">点击下载 IOS 版到电脑</a>
+                    <a class="patient_download btn btn-danger" href="http://112.74.27.30/android/user.apk">点击下载 Android 到电脑</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pk-container page7">
+            <h1 class="header" style="font-size: 32px;color: #5DD39A;margin-top: 20px;">联系我们</h1>
+            <div class="address" style="text-align: left;margin-top: 20px">地址：深圳市南山区南海大道1079号A座202</div>
+            <div class="phone" style="text-align: left;margin: 20px 0;"> 联系电话：0755-21610190</div>
+            <div id="allmap" style="width:100%; height:400px;margin-bottom: 12%;"></div>
+             <div class="footer" style="font-size: 12px;text-align: center">Copyright © 2015-2016 深圳市有康互联网医疗技术有限公司 All Rights Reserved  京ICP证120150号</div>
     </div>
 
     <script src="js/lib/require/require-2.1.20.min.js" data-main="js/app/module/product_centre"></script>
+    <script>
+
+        // 百度地图API功能
+        var map = new BMap.Map("allmap");
+        var point = new BMap.Point(113.927337,22.504855);
+        map.centerAndZoom(point, 18);
+
+        var marker = new BMap.Marker(point); // 创建点
+//        marker.enableDragging();
+
+        marker.addEventListener("click",function(){
+            window.open("http://api.map.baidu.com/geocoder?address=深圳市南海大道1079-3花园城数码大厦&output=html&src=有康私家医生");
+        })
+
+        map.addOverlay(marker);    //增加点
+
+    </script>
 </body>
 </html>
