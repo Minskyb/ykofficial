@@ -15,7 +15,7 @@ requirejs.config({
         underscore:'underscore/underscore-min-1.8.3',
         text:'require/require.text-2.0.5.min',
         css:'require/require.css.min-0.1.8',
-        fullPage:'fullPage/fullPage.min',
+        punk:'punk/js/punk',
 
         /********************************
          *        Bolt  框架
@@ -31,9 +31,9 @@ requirejs.config({
             deps:['jquery'],
             exports:'extra'
         },
-        fullPage:{
+        punk:{
             deps:['jquery'],
-            exports:'fullPage'
+            exports:'punk'
         }
     }
 });

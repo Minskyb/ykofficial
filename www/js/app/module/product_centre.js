@@ -3,13 +3,12 @@
  */
 'use strict';
 
-requirejs(['./common'],function(){
+requirejs(['./common','../../lib/jquery/jquery.1.9.1'],function(){
     requirejs([
         'jquery',
         'BModule',
-        'modal',
-        //'fullPage',
-        'extra'
+        'extra',
+        'punk'
     ],function($,BM){
 
         function Index(options){
@@ -25,6 +24,9 @@ requirejs(['./common'],function(){
         }
 
         $(document).ready(function(){
+
+            $(".pk-animation-box").Abox();
+
             var index = new Index();
             index.render();
 
