@@ -86,12 +86,14 @@ module.exports = function(grunt){
                         {
                             name:'../app/module/common',
                             include:[
+                                'underscore',
                                 'jquery',
                                 'BView',
                                 'BModule',
                                 'text',
                                 'extra',
-                                'modal'
+                                'modal',
+                                'punk'
                             ]
                         },
                         {
@@ -110,7 +112,7 @@ module.exports = function(grunt){
                         {
                             name:'../app/module/product_centre',
                             include:[
-                                'fullPage'
+                                'app/component/pro_banner'
                             ],
                             exclude:[
                                 '../app/module/common'
@@ -167,7 +169,7 @@ module.exports = function(grunt){
         'concat',
         'requirejs',
         'cssmin',
-        'clean:images',
+        //'clean:images',
         //'imagemin',
         'htmlmin'
     ])

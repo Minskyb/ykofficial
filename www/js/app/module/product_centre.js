@@ -3,13 +3,14 @@
  */
 'use strict';
 
-requirejs(['./common','../../lib/jquery/jquery.1.9.1'],function(){
+requirejs(['./common'],function(){
     requirejs([
         'jquery',
         'BModule',
+        'app/component/pro_banner',
         'extra',
         'punk'
-    ],function($,BM){
+    ],function($,BM,cProBa){
 
         function Index(options){
 
@@ -21,6 +22,10 @@ requirejs(['./common','../../lib/jquery/jquery.1.9.1'],function(){
         Index.prototype.initProperty = function(){
 
             BM.prototype.initProperty.call(this);
+
+            this.views = {
+                '.js-c-banner':cProBa
+            }
         }
 
         $(document).ready(function(){
@@ -29,8 +34,33 @@ requirejs(['./common','../../lib/jquery/jquery.1.9.1'],function(){
 
             var index = new Index();
             index.render();
+            confirmPlace();
 
+            $(window).bind("scroll",confirmPlace);
+
+            //alert($(window).height()/2);
+            //alert($("#page1").height()/2);
+
+            function confirmPlace(e){
+                var g = $(window).scrollTop(),min=g,$target,id;
+
+                if(g<=0){
+                    $(".nav-top .menu a").removeClass("active");
+                    $(".nav-top .menu a[data-target=#page1]").addClass("active");
+                    return;
+                }
+
+                $("[id^='page']").each(function(){
+                    var $this = $(this),
+                        top = $this.offset().top;
+                    if(g > top + $this.height()/2 - $(window).height()/2 -160  && g < top + $this.height()/2 - $(window).height()/2 +160){
+                        id= "#"+$this.attr("id");
+
+                        $(".nav-top .menu a").removeClass("active");
+                        $(".nav-top .menu a[data-target="+id+"]").addClass("active");
+                    }
+                });
+            }
         });
-
     });
 })

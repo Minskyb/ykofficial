@@ -552,12 +552,6 @@ img.pk-animation {
 .pk-animation.in {
   left: 0;
 }
-.pk-animation.lf {
-  left: -150%;
-}
-.pk-animation.rt {
-  left: 300%;
-}
 .page h1 {
   font-size: 18px;
 }
@@ -698,8 +692,14 @@ img.pk-animation {
   .page h3 {
     font-size: 18px;
   }
+  .page1 {
+    padding-bottom: 120px;
+  }
   .page2 .header {
     margin-top: 25%;
+  }
+  .page7 #allmap {
+    height: 400px;
   }
 }
 @media (min-width: 1280px) {
@@ -711,6 +711,19 @@ img.pk-animation {
   }
   .page h3 {
     font-size: 24px;
+  }
+  .page1 {
+    padding-bottom: 200px;
+    padding-top: 123px;
+  }
+  .page1 .content {
+    margin-top: 100px;
+  }
+  .page1 .content .logo {
+    margin-top: 40px;
+  }
+  .page7 #allmap {
+    height: 500px;
   }
 }
 .nav-top {

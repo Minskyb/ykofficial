@@ -10,46 +10,33 @@
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RVhalK9siqARKpOAv1uXdKFL"></script>
 </head>
 <body style="overflow-x: hidden">
-    <div class="nav-top" >
-       <div class="pk-container">
-           <div class="logo">有康私家医生</div>
-           <ul class="menu">
-               <li><a href="#page1" class="active">首页</a></li>
-               <li><a href="#page2">健康自检</a></li>
-               <li><a href="#page3">私家医生</a></li>
-               <li><a href="#page4">上门医生</a></li>
-               <li><a href="#page5">线上问询</a></li>
-               <li><a href="#page6">下载App</a></li>
-               <li><a href="#page7">联系我们</a></li>
-           </ul>
-       </div>
-    </div>
+   <div class="js-c-banner"></div>
 
-    <div class="pk-container page1 page">
+    <div class="pk-container page1 page" id="page1">
             <div class="header">
                 <h1>选择有康私家医生，就是选择健康<small class="small">上门服务，预约名医等，为您和家人的健康买单</small></h1>
             </div>
             <div class="pk-row np content">
                 <div class="pk-col-xs-3">
-                    <a href="#page2"><img src="./images/pro_p_6_1.png"></a>
+                    <a ><img src="./images/pro_p_6_1.png"></a>
                     <h3 class="logo">健康自检</h3>
                 </div>
                 <div class="pk-col-xs-3">
-                    <a href="#page3"><img src="./images/pro_p_2_3.png"></a>
+                    <a ><img src="./images/pro_p_2_3.png"></a>
                     <h3 class="logo">私家医生</h3>
                 </div>
                 <div class="pk-col-xs-3">
-                    <a href="#page4"><img src="./images/pro_p_2_1.png"></a>
+                    <a ><img src="./images/pro_p_2_1.png"></a>
                     <h3 class="logo">上门医生</h3>
                 </div>
                 <div class="pk-col-xs-3">
-                    <a href="#page5"><img src="./images/pro_p_2_2.png" ></a>
+                    <a ><img src="./images/pro_p_2_2.png" ></a>
                     <h3 class="logo">线上问询</h3>
                 </div>
             </div>
     </div>
 
-    <div class="pk-container page2 page">
+    <div class="pk-container page2 page" id="page2">
         <div class="pk-row np">
             <div class="pk-col-xs-5">
                 <div class="pk-animation-box" data-toggle="pk-ratio" data-ratio="1.78">
@@ -67,7 +54,7 @@
         </div>
     </div>
 
-    <div class="pk-row np">
+    <div class="pk-row np" id="page3">
         <img class="bg" src="./images/bg_pro_p_3.png" class="full">
         <div class="pk-container page3 page">
             <div class="pk-row np">
@@ -85,7 +72,7 @@
         </div>
     </div>
 
-    <div class="pk-container page4 page">
+    <div class="pk-container page4 page" id="page4">
         <div class="pk-row np">
             <div class="pk-col-xs-5">
                <div class="pk-animation-box" data-toggle="pk-ratio" data-ratio="1.426">
@@ -94,13 +81,13 @@
             </div>
             <div class="pk-col-xs-7">
                 <div class="header">
-                    <h1>健康自检<small class="small">了解自己及家人的健康状况</small></h1>
+                    <h1>上门医生<small class="small">无需排队，轻松享受在家诊疗</small></h1>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="pk-row np">
+    <div class="pk-row np" id="page5">
         <img class="bg" src="./images/bg_pro_p_5.png" class="full">
         <div class="pk-container page5 page">
             <div class="pk-row np">
@@ -120,7 +107,7 @@
 
 
     <div class="pk-container">
-        <div class="pk-row np page6 page">
+        <div class="pk-row np page6 page" id="page6">
             <div class="header">
                 <h1>有康私家医生<small class="small">随时随地呵护你的健康</small></h1>
             </div>
@@ -163,13 +150,13 @@
         </div>
     </div>
 
-    <div class="pk-container page7 page clearfix">
+    <div class="pk-container page7 page clearfix" id="page7">
         <div class="pk-col-xs-12">
             <h1 class="header">联系我们</h1>
             <div class="address"><h3>地址：深圳市南山区南海大道1079号A座202</h3></div>
             <div class="phone"> <h3>联系电话：0755-21610190</h3></div>
             <div id="allmap" ></div>
-            <div class="footer" style="font-size: 12px;text-align: center">Copyright © 2015-2016 深圳市有康互联网医疗技术有限公司 All Rights Reserved  京ICP证120150号</div>
+            <div class="footer" style="font-size: 12px;text-align: center">Copyright © 2015-2016 深圳市有康互联网医疗技术有限公司 All Rights Reserved  粤ICP备16012944号-1 </div>
         </div>
     </div>
 
@@ -180,9 +167,9 @@
         var map = new BMap.Map("allmap");
         var point = new BMap.Point(113.927337,22.504855);
         map.centerAndZoom(point, 18);
+        map.disableDragging();
 
         var marker = new BMap.Marker(point); // 创建点
-        marker.disableDragging();
 
         marker.addEventListener("click",function(){
             window.open("http://api.map.baidu.com/geocoder?address=深圳市南海大道1079-3花园城数码大厦&output=html&src=有康私家医生");
