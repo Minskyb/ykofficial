@@ -3,7 +3,7 @@
  */
 'use strict';
 
-requirejs(['./common'],function(){
+requirejs(['./common','../../lib/jquery/jquery.1.9.1'],function(){
     requirejs([
         'jquery',
         'BModule',
@@ -28,6 +28,7 @@ requirejs(['./common'],function(){
             }
         }
 
+
         $(document).ready(function(){
 
             $(".pk-animation-box").Abox();
@@ -37,9 +38,6 @@ requirejs(['./common'],function(){
             confirmPlace();
 
             $(window).bind("scroll",confirmPlace);
-
-            //alert($(window).height()/2);
-            //alert($("#page1").height()/2);
 
             function confirmPlace(e){
                 var g = $(window).scrollTop(),min=g,$target,id;
@@ -55,11 +53,23 @@ requirejs(['./common'],function(){
                         top = $this.offset().top;
                     if(g > top + $this.height()/2 - $(window).height()/2 -160  && g < top + $this.height()/2 - $(window).height()/2 +160){
                         id= "#"+$this.attr("id");
-
+                        $this.addClass("active");
                         $(".nav-top .menu a").removeClass("active");
                         $(".nav-top .menu a[data-target="+id+"]").addClass("active");
                     }
                 });
+            }
+
+            $(".service").click(link2Place);
+
+            function link2Place(e){
+                var $target = $(e.target);
+                var offsetTop = $($target.attr("data-target")).offset().top;
+
+                var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); // opera fix
+                $body.animate({
+                    scrollTop:offsetTop-$(window).height()/2 + $($target.attr("data-target")).height()/2
+                },"normal");
             }
         });
     });

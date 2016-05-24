@@ -1,0 +1,124 @@
+@media (min-width: 768px) {
+  .page {
+
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .nav-top{
+    display: block;
+    .pk-container{
+      width: 100%;
+      .logo {
+        .phone{
+          display: inline;
+          font-size: 14px;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  body{
+    font-size: 12px;
+  }
+
+  .description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .page1 {
+    padding-bottom: 80px;
+    padding-top: 83px;
+
+    .service{
+
+      &:after{
+        .display-flex();
+        .align-items(center);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 100%;
+//        .opacity(0.6);
+        color: #ffffff;
+        .transition(~"0.3s linear");
+      }
+
+      &:hover:after{
+        top: 0;
+      }//#5D8AD3
+      //#C95DD3
+
+      &.da:after{
+        content: '动态连续的健康记录，随时调用';
+      }
+      &.zx:after{
+        content: '一键式链接医生，提高就诊时效';
+      }
+      &.sm:after{
+        content: '随叫随到、提供最贴心的上门服务';
+      }
+      &.zz:after{
+        content: '无缝对接全球最顶尖的医疗资源';
+      }
+    }
+
+    .service.da{
+      &:after{
+        background-color: #D3895D;
+      }
+    }
+    .service.zx{
+      &:after{
+        background-color: #5DD39A;
+      }
+    }
+    .service.sm{
+      &:after{
+        background-color: #5D8AD3;
+      }
+    }
+    .service.zz{
+      &:after{
+        background-color: #C95DD3;
+      }
+    }
+  }
+
+  .page2{
+    .header{
+      margin-top: 15%;
+    }
+  }
+  .page3,.page5{
+    .header{
+      margin-top: 20%;
+    }
+  }
+  .page6{
+    .content{
+      .mark{
+        font-size: 18px;
+      }
+    }
+  }
+  .page7{
+    .footer{
+      margin-top: 50px;
+    }
+  }
+}

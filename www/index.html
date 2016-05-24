@@ -4,34 +4,57 @@
     <meta charset="utf-8">
     <meta name="keywords" content="有康私家医生,有康,互联网医疗,医疗"/>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <title>有康官网</title>
+    <title>有康私家医生-互联网私家医生服务平台</title>
+    <link rel="shortcut icon" href="http://www.uicare.cn/favicon.ico">
     <link rel="stylesheet" href="js/lib/punk/css/punk.css">
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RVhalK9siqARKpOAv1uXdKFL"></script>
+    <!--[if lt IE 9]>
+    <script src="./js/lib/respond.min.js"></script>
+    <![endif]-->
+    <!--<script src="./lib/echart/dist/echarts.js"></script>-->
+    <script>
+        /*百度统计*/
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?73d498a0160cc3556562f8c44f949f30";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RVhalK9siqARKpOAv1uXdKFL"></script>-->
 </head>
 <body style="overflow-x: hidden">
    <div class="js-c-banner"></div>
 
     <div class="pk-container page1 page" id="page1">
             <div class="header">
-                <h1>选择有康私家医生，就是选择健康<small class="small">上门服务，预约名医等，为您和家人的健康买单</small></h1>
+                <h1>选择有康私家医生，就是选择健康</h1>
             </div>
             <div class="pk-row np content">
                 <div class="pk-col-xs-3">
-                    <a ><img src="./images/pro_p_6_1.png"></a>
-                    <h3 class="logo">健康自检</h3>
+                    <div class="service da" data-target="#page2">
+                        <img class="full" src="./images/pro_p_6_1.png" alt="健康档案"/>
+                    </div>
+                    <h3 class="logo">健康档案</h3>
                 </div>
                 <div class="pk-col-xs-3">
-                    <a ><img src="./images/pro_p_2_3.png"></a>
-                    <h3 class="logo">私家医生</h3>
+                    <div class="service zx"  data-target="#page5">
+                        <img class="full" src="./images/pro_p_2_2.png" alt="实时咨询" >
+                    </div>
+                    <h3 class="logo">实时咨询</h3>
                 </div>
                 <div class="pk-col-xs-3">
-                    <a ><img src="./images/pro_p_2_1.png"></a>
-                    <h3 class="logo">上门医生</h3>
+                    <div class="service sm"  data-target="#page4">
+                        <img class="full" src="./images/pro_p_2_1.png" alt="上门服务">
+                    </div>
+                    <h3 class="logo">上门服务</h3>
                 </div>
                 <div class="pk-col-xs-3">
-                    <a ><img src="./images/pro_p_2_2.png" ></a>
-                    <h3 class="logo">线上问询</h3>
+                    <div class="service zz"  data-target="#page3">
+                        <img class="full" src="./images/pro_p_2_3.png"  alt="全球转诊">
+                    </div>
+                    <h3 class="logo">全球转诊</h3>
                 </div>
             </div>
     </div>
@@ -44,23 +67,59 @@
                 </div>
             </div>
             <div class="pk-col-xs-7">
-                    <h1 class="header">健康自检<small class="small">了解自己及家人的健康状况</small></h1>
-                    <div class="pk-row content">
-                        <div class="pk-col-xs-4"><img src="./images/pro_p_2_1.png" class="full"></div>
-                        <div class="pk-col-xs-4"><img src="./images/pro_p_2_2.png" class="full"></div>
-                        <div class="pk-col-xs-4"><img src="./images/pro_p_2_3.png" class="full"></div>
-                    </div>
+                <h1 class="header">健康档案</h1>
+                <p class="description">健康档案包含了健康档案管理和健康自检。健康档案以电子档案的形式记录了用户的以往病史、诊治情况、家族病史、现病史及历次诊疗经过、历次体检结果所体现的发生、发展、治疗和康复等，是一个动态连续且全面的健康记录过程，为医生提供最真实、最全面的诊断依据，伴随用户终身且随时可调用。</p>
             </div>
         </div>
     </div>
 
-    <div class="pk-row np" id="page3">
+
+   <div class="pk-row np" id="page5">
+       <img class="bg" src="./images/bg_pro_p_5.png" class="full">
+       <div class="pk-container page5 page">
+           <div class="pk-row np">
+               <div class="pk-col-xs-7">
+                   <div class="header">
+                       <h1>实时咨询</h1>
+                       <p class="description">有康私家医生整合了当地最优质的“全科医生+专科医生+医生助手”团队为用户提供在线实时咨询服务，通过APP、电话、微信端等任一种“一键式”的方式实现7*12小时的快速响应，提供健康问诊、健康指导和干预，提高就诊效率，全面接管用户全家的健康。</p>
+                   </div>
+               </div>
+               <div class="pk-col-xs-5 ">
+                   <div class="pk-animation-box" data-toggle="pk-ratio" data-ratio="2.942" >
+                       <img class="pk-animation rt" src="./images/pro_p_5.png">
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <div class="pk-row np" id="page4">
+       <div class="pk-container page4 page">
+           <div class="pk-row np">
+               <div class="pk-col-xs-5">
+                   <div class="pk-animation-box" data-toggle="pk-ratio" data-ratio="1.426">
+                       <img class="pk-animation lf" src="./images/pro_p_4.png">
+                   </div>
+               </div>
+               <div class="pk-col-xs-7">
+                   <div class="header">
+                       <h1>上门服务</h1>
+                       <p class="description">提供贴心的上门服务，尤其适用于老人、小孩、孕妇及各种突发状况，用户通过APP平台发出上门诉求并向自己的私家医生描述症状，双方进行初步沟通后，有康将到达指定地点进行上门服务。</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <div class="pk-row np" id="page3">
         <img class="bg" src="./images/bg_pro_p_3.png" class="full">
         <div class="pk-container page3 page">
             <div class="pk-row np">
                 <div class="pk-col-xs-7">
                     <div class="header">
-                        <h1>私家医生<small class="small">做您和家人的“大白”卫士</small></h1>
+                        <h1>全球转诊</h1>
+                        <p class="description">包含国内近300家三甲医院的优先挂号及绿色转诊通道，同时建立了海外就诊快速通道，为客户无缝对接跨半球的就医服务、优质的美方医疗资源以及打造多选择性平台体系，满足赴美客户享受国际领先的前沿医疗服务的需求。</p>
                     </div>
                 </div>
                 <div class="pk-col-xs-5 " >
@@ -72,58 +131,22 @@
         </div>
     </div>
 
-    <div class="pk-container page4 page" id="page4">
-        <div class="pk-row np">
-            <div class="pk-col-xs-5">
-               <div class="pk-animation-box" data-toggle="pk-ratio" data-ratio="1.426">
-                   <img class="pk-animation lf" src="./images/pro_p_4.png">
-               </div>
-            </div>
-            <div class="pk-col-xs-7">
-                <div class="header">
-                    <h1>上门医生<small class="small">无需排队，轻松享受在家诊疗</small></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="pk-row np" id="page5">
-        <img class="bg" src="./images/bg_pro_p_5.png" class="full">
-        <div class="pk-container page5 page">
-            <div class="pk-row np">
-                <div class="pk-col-xs-7">
-                    <div class="header">
-                        <h1>线上问询<small class="small">名医在线，随时随地解决疑难杂惑</small></h1>
-                    </div>
-                </div>
-                <div class="pk-col-xs-5 ">
-                    <div class="pk-animation-box" data-toggle="pk-ratio" data-ratio="2.942" >
-                        <img class="pk-animation rt" src="./images/pro_p_5.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div class="pk-container">
         <div class="pk-row np page6 page" id="page6">
             <div class="header">
-                <h1>有康私家医生<small class="small">随时随地呵护你的健康</small></h1>
+                <h1>有康私家医生<small class="small">随时随地呵护您的健康</small></h1>
             </div>
            <div class="pk-row np content">
                <div class="pk-col-xs-6" >
-                   <div class="doctor box"  data-toggle="modal" data-target=".modal-download-doctor">
-                       <img src="./images/doctor.png">
-                       <div class="">医生端</div>
-                       <div class="">版本号 V1.1</div>
+                   <div class="user box">
+                       <img src="./images/userMDL_160412.png">
+                       <div class="mark">用户端</div>
                    </div>
                </div>
                <div class="pk-col-xs-6" >
-                   <div class="user box" data-toggle="modal" data-target=".modal-download-user">
-                       <img src="./images/patient.png">
-                       <div class="">用户端</div>
-                       <div class="">版本号 V1.1</div>
+                   <div class="doctor box">
+                       <img src="./images/doctorMDL_160412.png">
+                       <div class="mark">医生端</div>
                    </div>
                </div>
            </div>
@@ -131,31 +154,18 @@
         </div>
     </div>
 
-    <div class="pk-modal fade modal-download-doctor">
-        <div class="pk-modal-dialog pk-box" style="text-align: center">
-            <img src="images/doctorMDL.png" style="width: 40%">
-            <div class="pc_download">
-                <a class="doctor_download btn btn-danger" href="https://appsto.re/cn/zRTx_.i" target="_blank">点击下载 IOS 版到电脑</a>
-                <a class="patient_download btn btn-danger" href="http://112.74.27.30/android/doctor.apk">点击下载 Android 到电脑</a>
-            </div>
-        </div>
-    </div>
-    <div class="pk-modal fade modal-download-user">
-        <div class="pk-modal-dialog pk-box" style="text-align: center">
-            <img src="images/userMDL.png" style="width: 40%">
-            <div class="pc_download">
-                <a class="doctor_download btn btn-danger" href="https://appsto.re/cn/GHTx_.i" target="_blank">点击下载 IOS 版到电脑</a>
-                <a class="patient_download btn btn-danger" href="http://112.74.27.30/android/user.apk">点击下载 Android 到电脑</a>
-            </div>
-        </div>
-    </div>
-
     <div class="pk-container page7 page clearfix" id="page7">
         <div class="pk-col-xs-12">
-            <h1 class="header">联系我们</h1>
-            <div class="address"><h3>地址：深圳市南山区南海大道1079号A座202</h3></div>
-            <div class="phone"> <h3>联系电话：0755-21610190</h3></div>
-            <div id="allmap" ></div>
+            <div class="header"><h1 style="text-align: left">关于有康</h1></div>
+            <p><span style="font-weight: bold;padding-right: 5px;">深圳市有康互联网医疗科技有限公司</span>是一家致力于立足于智慧医疗领域，构建新医疗生态圈的医疗创新企业，公司首次投入数千万，通过信息技术、先进疗法、战略创新、管理创新等，推动智慧医疗生态的形成。致力于打造覆盖健康档案管理、定期上门服务、在线实时问诊、国内国外转诊四大特色医疗服务的私家医生服务平台。我们的私家医生APP平台能根据用户的不同需求，提供连续性、综合性的就医服务和健康管理，在提升用户就医体验的同时，驱动中国医疗产业走向智慧医疗新生态。</p>
+            <div class="header"><h1 style="text-align: left">公司地址</h1></div>
+            <p>杭州分公司：杭州市拱墅区丰潭路380号城西银泰B座803</p>
+            <p>重庆分公司：重庆市渝北区洪湖西路22号15-13号 </p>
+            <p>深圳分公司：深圳市南山区南海大道1079号花园城数码大厦A座202</p>
+            <!--<div id="allmap" ></div>-->
+            <div class="header"><h1 style="text-align: left">联系我们</h1></div>
+            <p>400 电话：400-686-9900（7*12小时客服热线）</p>
+            <p>邮箱：4006869900@ucare.love</p>
             <div class="footer" style="font-size: 12px;text-align: center">Copyright © 2015-2016 深圳市有康互联网医疗技术有限公司 All Rights Reserved  粤ICP备16012944号-1 </div>
         </div>
     </div>
@@ -163,19 +173,19 @@
     <script src="js/lib/require/require-2.1.20.min.js" data-main="js/app/module/product_centre"></script>
     <script>
 
-        // 百度地图API功能
-        var map = new BMap.Map("allmap");
-        var point = new BMap.Point(113.927337,22.504855);
-        map.centerAndZoom(point, 18);
-        map.disableDragging();
-
-        var marker = new BMap.Marker(point); // 创建点
-
-        marker.addEventListener("click",function(){
-            window.open("http://api.map.baidu.com/geocoder?address=深圳市南海大道1079-3花园城数码大厦&output=html&src=有康私家医生");
-        })
-
-        map.addOverlay(marker);    //增加点
+//        // 百度地图API功能
+//        var map = new BMap.Map("allmap");
+//        var point = new BMap.Point(113.927337,22.504855);
+//        map.centerAndZoom(point, 18);
+//        map.enableDragging();
+//
+//        var marker = new BMap.Marker(point); // 创建点
+//
+//        marker.addEventListener("click",function(){
+//            window.open("http://api.map.baidu.com/geocoder?address=深圳市南海大道1079-3花园城数码大厦&output=html&src=有康私家医生");
+//        })
+//
+//        map.addOverlay(marker);    //增加点
 
     </script>
 </body>

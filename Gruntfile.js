@@ -128,7 +128,7 @@ module.exports = function(grunt){
                     strictMath: true,
                     sourceMap: true,
                     outputSourceFiles: true,
-                    sourceMapURL: '<%= pkg.name %>.css.map',
+                    sourceMapURL: 'main.css.map',
                     sourceMapFilename: 'www/css/main.css.map'
                 },
                 src: 'www/less/<%= pkg.name %>.less',
@@ -139,7 +139,7 @@ module.exports = function(grunt){
                     strictMath: true,
                     sourceMap: true,
                     outputSourceFiles: true,
-                    sourceMapURL: '<%= pkg.name %>-theme.css.map',
+                    sourceMapURL: 'main-theme.css.map',
                     sourceMapFilename: 'www/css/main-theme.css.map'
                 },
                 src: 'www/less/theme.less',
@@ -169,7 +169,7 @@ module.exports = function(grunt){
         'concat',
         'requirejs',
         'cssmin',
-        //'clean:images',
+        'clean:images',
         //'imagemin',
         'htmlmin'
     ])

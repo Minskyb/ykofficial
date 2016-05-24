@@ -1,19 +1,62 @@
+.pk-animation-box{
+  width: 80%;
+}
+
+p{
+  text-align: left;
+  line-height: 1.5;
+  text-indent: 0;
+}
+
+body{
+  font-size: 10px;
+}
+
+.description{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active .pk-animation.lf{
+  left: 0;
+}
+.pk-animation.lf{
+  left: -250%;
+}
+
+.active .pk-animation.rt{
+  right: 0;
+}
+
+.pk-animation.rt{
+  right: -410%;
+}
 
 img.pk-animation{
   width: 100%;
-  .transition(~"0.3s");
+  .transition(~"0.7s");
 }
 
 .pk-animation.in{
   left: 0;
 }
 
-//.pk-animation.lf{
-//  left: -150%;
-//}
-//.pk-animation.rt{
-//  left:300%;
-//}
+.ani.rotate:hover{
+  -webkit-animation: rotate 0.3s linear 0s 1 normal;
+  animation: rotate 0.3s linear 0s 1 normal;
+}
+@-webkit-keyframes rotate {
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+@keyframes rotate {
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+
 
 .page{
 
@@ -50,16 +93,23 @@ img.pk-animation{
 
 .page1{
   text-align: center;
-  padding-top: 53px;
+  padding-top: 23px;
   padding-bottom: 40px;
+
   .content{
     margin-top: 50px;
     .logo{
       margin-top: 20px;
     }
 
-    img{
-      width: 100%;
+    .service{
+      width: 70%;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 50%;
+      cursor: pointer;
+
     }
   }
 }
@@ -68,7 +118,13 @@ img.pk-animation{
 
   padding-top:15px ;
   .header{
-    margin-top: 15%;
+    margin-top: 20%;
+    padding-top: 0px;
+  }
+  .content{
+    img{
+      width: 80%;
+    }
   }
 }
 
@@ -78,11 +134,12 @@ img.pk-animation{
   padding-bottom: 30px;
 
   .pk-animation-box{
-    width: 50%;
+    width: 45%;
+    margin-left: 20%;
   }
 
   .header{
-    margin-top: 35%;
+    margin-top: 30%;
   }
 }
 
@@ -91,7 +148,11 @@ img.pk-animation{
   padding-top:30px ;
 
   .header{
-    margin-top: 35%;
+    margin-top: 20%;
+  }
+
+  .pk-animation-box{
+    width: 90%;
   }
 }
 
@@ -101,11 +162,13 @@ img.pk-animation{
 
   .content{
 
-    margin: 40px 0;
+//    margin: 40px 0;
 
     .box{
       padding:30px 45px;
-      border: 1px dashed red;
+      img{
+        width: 80%;
+      }
     }
     .doctor{
       float: right;
@@ -115,15 +178,17 @@ img.pk-animation{
       float: left;
       text-align: center;
     }
+    .mark{
+      color: @main-color;
+      font-size: 16px;
+    }
   }
 }
 
 .pk-modal{
-  img{
-    width: 80%;
-  }
+
   .pc_download{
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
 
     a{
@@ -140,7 +205,7 @@ img.pk-animation{
 .page7{
   .header{
     font-size: 32px;
-    color: #5DD39A;
+    color: @main-color;
     margin-top: 20px;
   }
   .phone,.address{
@@ -152,100 +217,8 @@ img.pk-animation{
     height:200px;
     margin-bottom: 12%;
   }
-}
-
-@media (min-width: 768px) {
-  .page {
-
-    h1 {
-      font-size: 24px;
-    }
-    h2 {
-      font-size: 20px;
-    }
-    h3 {
-      font-size: 16px;
-    }
-  }
-
-  .nav-top{
-    display: block;
-  }
-
-  .page1 {
-    padding-bottom: 80px;
-    padding-top: 83px;
+  .footer{
+    margin-top: 30px;
   }
 }
-@media (min-width: 1024px) {
 
-//  .pk-animation.lf{
-//    left: -200%;
-//  }
-//  .pk-animation.rt{
-//    left:350%;
-//  }
-
-  .page{
-
-    h1{
-      font-size: 30px;
-    }
-    h2 {
-      font-size: 24px;
-    }
-    h3{
-      font-size: 18px;
-    }
-  }
-  //page1
-  .page1 {
-    padding-bottom: 120px;
-  }
-  // page2
-  .page2{
-    .header{
-      margin-top: 25%;
-    }
-  }
-  // page7
-  .page7{
-    #allmap{
-      height:400px;
-    }
-  }
-}
-@media (min-width: 1280px) {
-//  .pk-animation.rt{
-//    left:450%;
-//  }
-  .page{
-
-    h1{
-      font-size: 36px;
-    }
-    h2 {
-      font-size: 30px;
-    }
-    h3{
-      font-size: 24px;
-    }
-  }
-  //page1
-  .page1 {
-    padding-bottom: 200px;
-    padding-top: 123px;
-    .content{
-      margin-top: 100px;
-      .logo {
-        margin-top: 40px;
-      }
-    }
-  }
-  // page7
-  .page7{
-    #allmap{
-      height:500px;
-    }
-  }
-}

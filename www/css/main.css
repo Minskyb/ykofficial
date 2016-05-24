@@ -22,7 +22,7 @@ h6 {
   font-weight: normal;
 }
 body {
-  font-family: "微软雅黑", "宋体", SimHei, arial;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", SimHei, arial;
   font-size: 16px;
 }
 .indent-2em {
@@ -94,49 +94,6 @@ body {
 }
 .icon_email {
   background-image: url("../images/i_email.png");
-}
-.logo-menu .menu {
-  float: right;
-}
-.logo-menu .menu .item {
-  height: 98px;
-  line-height: 98px;
-  width: 84px;
-  text-align: center;
-  cursor: pointer;
-  *cursor: hand;
-}
-.logo-menu .menu .item.active {
-  background-color: #f26451;
-  color: white;
-}
-.logo-menu .menu .item:hover {
-  background-color: #f26451;
-  color: white;
-  -webkit-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.logo-menu .logo {
-  float: left;
-  vertical-align: bottom;
-}
-.logo-menu .logo .logo-icon {
-  height: 98px;
-  width: 87px;
-  background-image: url("../images/logo_icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 18px;
-}
-.logo-menu .logo .logo-name {
-  height: 98px;
-  width: 118px;
-  background-image: url("../images/logo_name.png");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 /* ************** product introduction  **************** */
 .home-page-introduction {
@@ -541,16 +498,66 @@ body {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+.pk-animation-box {
+  width: 80%;
+}
+p {
+  text-align: left;
+  line-height: 1.5;
+  text-indent: 0;
+}
+body {
+  font-size: 10px;
+}
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.active .pk-animation.lf {
+  left: 0;
+}
+.pk-animation.lf {
+  left: -250%;
+}
+.active .pk-animation.rt {
+  right: 0;
+}
+.pk-animation.rt {
+  right: -410%;
+}
 img.pk-animation {
   width: 100%;
-  -webkit-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
 }
 .pk-animation.in {
   left: 0;
+}
+.ani.rotate:hover {
+  -webkit-animation: rotate 0.3s linear 0s 1 normal;
+  animation: rotate 0.3s linear 0s 1 normal;
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .page h1 {
   font-size: 18px;
@@ -580,7 +587,7 @@ img.pk-animation {
 }
 .page1 {
   text-align: center;
-  padding-top: 53px;
+  padding-top: 23px;
   padding-bottom: 40px;
 }
 .page1 .content {
@@ -589,14 +596,23 @@ img.pk-animation {
 .page1 .content .logo {
   margin-top: 20px;
 }
-.page1 .content img {
-  width: 100%;
+.page1 .content .service {
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .page2 {
   padding-top: 15px ;
 }
 .page2 .header {
-  margin-top: 15%;
+  margin-top: 20%;
+  padding-top: 0px;
+}
+.page2 .content img {
+  width: 80%;
 }
 .page3,
 .page5 {
@@ -605,27 +621,30 @@ img.pk-animation {
 }
 .page3 .pk-animation-box,
 .page5 .pk-animation-box {
-  width: 50%;
+  width: 45%;
+  margin-left: 20%;
 }
 .page3 .header,
 .page5 .header {
-  margin-top: 35%;
+  margin-top: 30%;
 }
 .page4 {
   padding-top: 30px ;
 }
 .page4 .header {
-  margin-top: 35%;
+  margin-top: 20%;
+}
+.page4 .pk-animation-box {
+  width: 90%;
 }
 .page6 {
   margin: 40px 0;
 }
-.page6 .content {
-  margin: 40px 0;
-}
 .page6 .content .box {
   padding: 30px 45px;
-  border: 1px dashed red;
+}
+.page6 .content .box img {
+  width: 80%;
 }
 .page6 .content .doctor {
   float: right;
@@ -635,11 +654,12 @@ img.pk-animation {
   float: left;
   text-align: center;
 }
-.pk-modal img {
-  width: 80%;
+.page6 .content .mark {
+  color: #4E9FA6;
+  font-size: 16px;
 }
 .pk-modal .pc_download {
-  width: 80%;
+  width: 40%;
   margin: 0 auto;
 }
 .pk-modal .pc_download a {
@@ -651,7 +671,7 @@ img.pk-animation {
 }
 .page7 .header {
   font-size: 32px;
-  color: #5DD39A;
+  color: #4E9FA6;
   margin-top: 20px;
 }
 .page7 .phone,
@@ -663,6 +683,9 @@ img.pk-animation {
   width: 100%;
   height: 200px;
   margin-bottom: 12%;
+}
+.page7 .footer {
+  margin-top: 30px;
 }
 @media (min-width: 768px) {
   .page h1 {
@@ -677,12 +700,94 @@ img.pk-animation {
   .nav-top {
     display: block;
   }
+  .nav-top .pk-container {
+    width: 100%;
+  }
+  .nav-top .pk-container .logo .phone {
+    display: inline;
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  body {
+    font-size: 12px;
+  }
+  .description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .page1 {
     padding-bottom: 80px;
     padding-top: 83px;
   }
+  .page1 .service:after {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    color: #ffffff;
+    -webkit-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  .page1 .service:hover:after {
+    top: 0;
+  }
+  .page1 .service.da:after {
+    content: '动态连续的健康记录，随时调用';
+  }
+  .page1 .service.zx:after {
+    content: '一键式链接医生，提高就诊时效';
+  }
+  .page1 .service.sm:after {
+    content: '随叫随到、提供最贴心的上门服务';
+  }
+  .page1 .service.zz:after {
+    content: '无缝对接全球最顶尖的医疗资源';
+  }
+  .page1 .service.da:after {
+    background-color: #D3895D;
+  }
+  .page1 .service.zx:after {
+    background-color: #5DD39A;
+  }
+  .page1 .service.sm:after {
+    background-color: #5D8AD3;
+  }
+  .page1 .service.zz:after {
+    background-color: #C95DD3;
+  }
+  .page2 .header {
+    margin-top: 15%;
+  }
+  .page3 .header,
+  .page5 .header {
+    margin-top: 20%;
+  }
+  .page6 .content .mark {
+    font-size: 18px;
+  }
+  .page7 .footer {
+    margin-top: 50px;
+  }
 }
 @media (min-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
   .page h1 {
     font-size: 30px;
   }
@@ -692,17 +797,41 @@ img.pk-animation {
   .page h3 {
     font-size: 18px;
   }
+  .nav-top {
+    display: block;
+  }
+  .nav-top .pk-container {
+    width: 842px;
+  }
+  .nav-top .pk-container .logo .phone {
+    display: inline;
+    font-size: 16px;
+    padding-left: 8px;
+  }
   .page1 {
     padding-bottom: 120px;
   }
   .page2 .header {
     margin-top: 25%;
   }
+  .page3 .header,
+  .page5 .header {
+    margin-top: 30%;
+  }
+  .page6 .content .mark {
+    font-size: 22px;
+  }
   .page7 #allmap {
     height: 400px;
   }
+  .page7 .footer {
+    margin-top: 70px;
+  }
 }
 @media (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
   .page h1 {
     font-size: 36px;
   }
@@ -711,6 +840,15 @@ img.pk-animation {
   }
   .page h3 {
     font-size: 24px;
+  }
+  .nav-top {
+    display: block;
+  }
+  .nav-top .pk-container {
+    width: 1080px;
+  }
+  .nav-top .pk-container .logo .phone {
+    display: inline;
   }
   .page1 {
     padding-bottom: 200px;
@@ -722,8 +860,14 @@ img.pk-animation {
   .page1 .content .logo {
     margin-top: 40px;
   }
+  .page6 .content .mark {
+    font-size: 24px;
+  }
   .page7 #allmap {
     height: 500px;
+  }
+  .page7 .footer {
+    margin-top: 90px;
   }
 }
 .nav-top {
@@ -737,7 +881,15 @@ img.pk-animation {
   float: left;
   padding: 10px 0;
   font-size: 24px;
-  color: #5DD39A;
+  color: #4E9FA6;
+}
+.nav-top .logo .pic {
+  float: left;
+  height: 31px;
+}
+.nav-top .logo .words {
+  float: left;
+  margin-left: 15px;
 }
 .nav-top .menu {
   float: right;
@@ -758,6 +910,67 @@ img.pk-animation {
   background-color: #EDEDED;
 }
 .nav-top .menu > li a.active {
-  color: #5399B5;
+  color: #4E9FA6;
 }
-/*# sourceMappingURL=ykofficial.css.map */
+.yk_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.yk_flex_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+}
+.yk_h_center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.yk_h_lef {
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+.yk_h_right {
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  -webkit-justify-content: right;
+  justify-content: right;
+}
+.yk_v_center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.yk_v_lef {
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  -webkit-align-items: left;
+  align-items: left;
+}
+.yk_v_right {
+  -webkit-box-align: right;
+  -ms-flex-align: right;
+  -webkit-align-items: right;
+  align-items: right;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--?type=9999&date=1460084849530-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <script src="//cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script>
+    <title>套餐确认</title>
+    <style>
+        html,body{font-family: "微软雅黑", "宋体", SimHei, arial;margin: 0;padding: 0;font-size: small;}
+        body{padding: 20px;}
+        .list>li{margin-bottom: 12px;}
+        p{font-size: medium;}
+
+        @media screen and (min-width:360px) {
+            html,body{font-size: medium;}
+            p{font-size: large;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>恭喜你，成为有康私家医生签约用户！</p>
+        <div class="content">
+            <div><span class="name">体检套餐</span>服务内容包含：</div>
+            <ol class="list">
+                <li>体验套餐</li>
+                <li>体验套餐</li>
+                <li>体验套餐</li>
+            </ol>
+        </div>
+        <div>套餐到期时间：<span class="cut-date"></span></div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            function getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+                if (r != null) return unescape(r[2]); return null; //返回参数值
+            }
+
+            var packages ={
+                9999:{
+                    name:"体验套餐",
+                    price_date:'1分/15天',
+                    content:["健康档案的建立与管理","个人客户实时健康咨询"]
+                },
+                1001:{
+                    name:"基础套餐",
+                    price_date:'580元/年',
+                    content:["健康档案的建立与管理","个人客户实时健康咨询","医生上门服务(2次免费)","国内转诊服务（1次免费）"]
+                },
+                1002:{
+                    name:"体检套餐",
+                    price_date:'980元/年',
+                    content:["健康档案的建立与管理","个人客户实时健康咨询","医生上门服务(2次免费)","国内转诊服务（1次免费）","健康基础体检(1次免费)","健康报告解读"]
+                }
+            }
+
+            var type_id = getUrlParam("type");
+            var time = getUrlParam("date");
+            var date = new Date(Number(time));
+            var dateStr = date.getFullYear() +"年"+(date.getMonth()+1)+"月"+date.getDate()+"日";
+            $(".cut-date").text(dateStr);
+            var data = packages[type_id];
+            $(".name").text(data.name);
+            var str = '';
+            for(var i = 0 ;i < data.content.length;i++){
+                var str = str +'<li>'+ data.content[i]+'</li>';
+            }
+            $(".list").html(str);
+
+        });
+    </script>
+</body>
+</html>

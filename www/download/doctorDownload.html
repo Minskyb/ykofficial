@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>二维码跳转</title>
+</head>
+<body>
+    <script>
+//        alert(navigator.userAgent);
+        if(navigator.userAgent.match(/iPhone/)||navigator.userAgent.match(/iPad/)){
+            // IOS 下载地址
+            window.location.href = "https://itunes.apple.com/cn/app/you-kang-si-jia-yi-sheng-yi/id1063181017?l=zh&ls=1&mt=8";
+//            alert("IOS 版本敬请期待");
+        }
+        else if(navigator.userAgent.match(/Android/)){
+            // android 下载地址
+            window.location.href = "http://www.uicare.cn/download/android/doctor.apk";
+            countDownLoad(1,3,'1.1.1');
+            if(navigator.userAgent.match(/MicroMessenger/i)) {
+                alert("微信用户请点击右上角选择“在浏览器中打开”.");
+            }
+        }
+        else{
+            alert("应用下载失败，点击进入下载页！");
+            window.history.back(-1);
+        }
+
+        function countDownLoad(terminal,apptype,version_id){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if((xhr.status >=200 && xhr.status<300) || xhr.status == 304){
+                    console.log(new Date().toLocaleDateString()+ xhr.responseText);
+                }
+            };
+            // 外网
+            xhr.open("post","http://120.25.66.245/yk/Appdown",true);
+
+            // 内网
+//        xhr.open("post","http://192.168.20.16/yk/Appdown",true);
+            xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            xhr.send("terminal="+terminal+"&apptype="+apptype+"&version_id="+version_id+"");
+        }
+
+    </script>
+
+</body>
+</html>

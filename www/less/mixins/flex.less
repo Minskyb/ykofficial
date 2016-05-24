@@ -1,0 +1,27 @@
+
+.display-flex(){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.justify-content(@P){
+         -webkit-box-pack:     @P;
+             -ms-flex-pack:    @P;
+  -webkit-justify-content:   @P;
+           justify-content:   @P;
+}
+
+.flex-shrink(@percent){
+     -webkit-box-flex:  @percent ;
+  -webkit-flex-shrink:  @percent;
+           flex-shrink:  @percent;
+}
+
+.align-items(@P){
+  -webkit-box-align: @P;
+  -ms-flex-align: @P;
+  -webkit-align-items: @P;
+  align-items: @P;
+}
