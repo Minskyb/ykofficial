@@ -4,10 +4,10 @@
 'use strict';
 
 requirejs.config({
-    baseUrl:'js/lib',
+    baseUrl:'/lib',
     paths:{
-        app:'../app',
-        dataService:'../app/config/dataService',
+        app:'../',
+        dataService:'../config/dataService',
         /********************************
          *       插件
          ********************************/
@@ -20,8 +20,8 @@ requirejs.config({
         /********************************
          *        Bolt  框架
          ********************************/
-        BView:'../app/component/abstract.view',
-        BModule:'../app/module/abstract.module'
+        BView:'../component/abstract.view',
+        BModule:'../module/abstract.module'
     },
     skim:{
         jquery:{
